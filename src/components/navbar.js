@@ -14,6 +14,11 @@ export default function Navbar() {
         <li>
           <Link href="/about">About</Link>
         </li>
+        <li>
+          <Link href="https://waiver.smartwaiver.com/w/5dc496b7cf021/web/">
+            Waiver
+          </Link>
+        </li>
       </ul>
     </nav>
   );
