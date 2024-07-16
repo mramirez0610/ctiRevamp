@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import Climb_Time_Indy_Logo from "../assets/Climb_Time_Indy_Logo_Old.jpg";
@@ -12,11 +13,48 @@ const images = [
   { src: Shoe_Rack, name: "Shoe Rack" },
 ];
 
+const interval = 5000;
+
 export default function Hero() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, [images.length, interval]);
+
   return (
-    <div className="flex flex-wrap justify-space-between">
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "300px",
+        overflow: "hidden",
+      }}
+    >
       {images.map((image, index) => (
-        <Image key={index} src={image.src} alt={`${image.name}`} height={120} />
+        <div
+          key={index}
+          style={{
+            position: index === currentIndex ? "relative" : "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            transition: "opacity 1s ease-in-out",
+            opacity: index === currentIndex ? 1 : 0,
+          }}
+        >
+          <Image
+            src={image.src}
+            alt={`${image.name}`}
+            height={120}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
+        </div>
       ))}
     </div>
   );
