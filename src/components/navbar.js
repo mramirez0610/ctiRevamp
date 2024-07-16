@@ -1,4 +1,4 @@
-import styles from "../scss/comp.module.scss";
+import styles from "@/scss/comp.module.scss";
 import Link from "next/link";
 
 export default function Navbar() {
