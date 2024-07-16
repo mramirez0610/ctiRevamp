@@ -1,0 +1,28 @@
+{
+  "prices": {
+    "Passes": [
+      {
+        "name": "Day Pass",
+        "price": "$12"
+      },
+      {
+        "name": "Boulder Pass",
+        "price": "$10"
+      },
+      {
+        "name": "Day Pass with Gear",
+        "price": "$18"
+      },
+      {
+        "name": "Boulder Pass with Gear",
+        "price": "$13"
+      }
+    ],
+    "Memberships": [
+      { "timePeriod": "1 Month", "price": "$40" },
+      { "timePeriod": "3 Months", "price": "$115" },
+      { "timePeriod": "6 Months", "price": "$210" },
+      { "timePeriod": "12 Months", "price": "$360" }
+    ]
+  }
+}
