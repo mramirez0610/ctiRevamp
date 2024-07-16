@@ -1,4 +1,4 @@
-import styles from "../scss/comp.module.scss";
+import styles from "@/scss/comp.module.scss";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -13,6 +13,9 @@ export default function Navbar() {
         </li>
         <li>
           <Link href="/about">About</Link>
+        </li>
+        <li>
+          <Link href="/parties">Parties</Link>
         </li>
         <li>
           <Link href="https://waiver.smartwaiver.com/w/5dc496b7cf021/web/">
