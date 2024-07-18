@@ -7,7 +7,7 @@ export default function RootLayout({ children }) {
     <>
       <Navbar />
       <main className={styles.main}>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
