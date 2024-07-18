@@ -18,6 +18,42 @@ export default function About() {
         for. Come on by; we’d love for you to come climbing with us.
       </p>
       <MapDisplay />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ display: "flex" }}>
+          <button
+            style={{
+              backgroundColor: "inherit",
+              border: "1px solid",
+              margin: "2.5px",
+              padding: "2px",
+            }}
+            onClick={() =>
+              window.open("https://www.facebook.com/climbtimeindy")
+            }
+          >
+            Facebook
+          </button>
+          <button
+            style={{
+              backgroundColor: "inherit",
+              border: "1px solid",
+              margin: "2.5px",
+              padding: "2px",
+            }}
+            onClick={() =>
+              window.open("https://www.instagram.com/climbtimeindy/")
+            }
+          >
+            Instagram
+          </button>
+        </div>
+      </div>
     </section>
   );
 }
