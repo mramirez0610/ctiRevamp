@@ -5,7 +5,8 @@
 - [ ] install axios in order to make api calls easily -[x] router for about, contact, and home
 - [ ] add contact page w phone number, email, and social media links and map location
 - [ ] Rock Gym Api Integration
-- [ ] Add a Map
+- [x] Add a Map
+- [ ] ability to grab directions directly from the map
 - [ ] Add a Calendar
 - [ ] Add a Schedule
 
