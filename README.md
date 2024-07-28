@@ -3,7 +3,7 @@
 - [x] add a navbar
 - [x] add afooter
 - [ ] install axios in order to make api calls easily -[x] router for about, contact, and home
-- [ ] add contact page w phone number, email, and social media links and map location
+- [x] add contact page w phone number, email, and social media links and map location
 - [ ] Rock Gym Api Integration
 - [x] Add a Map
 - [ ] ability to grab directions directly from the map
@@ -31,3 +31,7 @@
 - UploadThing Integration for uploading photos and videos
 - find a way to convert images into .webp format for loading speed
 - learn css grid for the gallery page
+
+## Brandon notes
+
+- Change the directions grabber to a Card that has a button that grabs directions instead of automatically grabbing directions

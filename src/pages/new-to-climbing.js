@@ -1,0 +1,143 @@
+export default function NewToClimbing() {
+  return (
+    <section>
+      <h1>New to climbing?</h1>
+      <p>
+        Here at Climb The Indy, we have a variety of climbing options for you to
+        choose from. Boulding, Top Ropes, Auto Belays, Lead Climbing,
+        Hangboards, and Campus Boards are all available to climb and train on at
+        our gym.
+      </p>
+      <p>
+        If you are new to climbing, we recommend starting with Top Ropes,
+        Bouldering, and Auto Belays. These are perfect for getting a feel for
+        climbing and are a great way to get started.
+      </p>
+
+      <h1>Why should I climb?</h1>
+      <p>
+        Climbing is a great way to get exercise both your mind and body through
+        climbing puzzles that require flexibility, footwork and strength . It is
+        also a great way to learn and improve your problem solving skills and
+        gain confidence.
+      </p>
+
+      <div>
+        <h2>What is Top Ropes?</h2>
+        <p>
+          Top rope climbing is a beginner-friendly style of climbing where the
+          rope runs from the climber's harness up to an anchor system at the top
+          of the route and back down to the belay device on the ground where
+          another person belays the climber. This creates a continuous loop that
+          protects the climber in case of a fall.
+        </p>
+        <h3>Top rope climbing is ideal for beginners because:</h3>
+        <ul>
+          <li>
+            <p>It is easy to learn and practice climbing.</p>
+          </li>
+          <li>
+            <p>Adds security of always being "on belay" during the climb.</p>
+          </li>
+          <li>
+            <p>Allows climbers to practice skills with less risk.</p>
+          </li>
+          <li>
+            <p>
+              Builds core strength, endurance, and problem-solving skills over
+              time.
+            </p>
+          </li>
+        </ul>
+
+        <h3>Gear Recommendations</h3>
+        <p>We recommend the following gear for beginners:</p>
+        <ul>
+          <li>
+            <p>A climbing harness</p>
+          </li>
+          <li>
+            <p>Climbing shoes</p>
+          </li>
+          <li>
+            <p>Chalk bag with chalk</p>
+          </li>
+        </ul>
+
+        <h3>Safety Tips</h3>
+        <p>
+          Always check you are properly secured in the harness before you start
+          climbing. Check to see if you are properly attached to the rope. Make
+          sure you are using the proper harness for the type of climb you are
+          doing. If you are not sure, ask a member of the staff for help.
+        </p>
+      </div>
+
+      <div>
+        <h2>What is Bouldering?</h2>
+        <p>
+          Bouldering is a unique form of rock climbing that focuses on climbing
+          short routes close to the ground, called "problems," without the use
+          of ropes or harnesses. As a subtype of climbing, bouldering emphasizes
+          powerful and dynamic movements on smaller rock faces and boulders.
+        </p>
+
+        <h3>
+          Bouldering differs from standard roped climbing in a few key ways:
+        </h3>
+        <ul>
+          <li>
+            No ropes - Unlike rock climbing, bouldering does not require ropes,
+            harnesses, anchoring equipment or belay partners. The short route
+            lengths and close proximity to the ground make ropes unnecessary.
+          </li>
+          <li>
+            Limited height - Bouldering problems are generally less than 20 feet
+            tall, although some problems can range up to 30+ feet. This allows
+            climbers to land back to the ground or fall onto crash pads safely
+            if they come off the wall.
+          </li>
+          <li>
+            Powerful moves - With its explosive, powerful sequences on smaller
+            holds, bouldering focuses more on finger strength, lock off
+            strength, grip endurance and dynamic movements compared to
+            endurance-focused roped climbing.
+          </li>
+        </ul>
+
+        <h3>Gear Recommendations</h3>
+        <p>We recommend the following gear for beginners:</p>
+        <ul>
+          <li>
+            <p>Climbing shoes</p>
+          </li>
+          <li>
+            <p>Chalk bag with chalk</p>
+          </li>
+        </ul>
+
+        <h3>Safety Tips</h3>
+        <p>
+          Always check if there are other people in the area before you start
+          climbing. Do not walk under someone else while they are climbing as
+          they may fall.
+        </p>
+      </div>
+
+      <div>
+        <h2>What is an Auto Belay?</h2>
+        <p>
+          Auto belays, a short form of automatic belays, are designed to provide
+          support for climbers as they scale up the wall.
+        </p>
+        <p>
+          They are mechanical devices that use friction brakes, anchored at the
+          top of the route to allow a climber to climb up without the need of a
+          human belayer. The device brakes when the climber falls off the wall
+          and then slows down the climber to allow them to safely return to the
+          ground.
+        </p>
+      </div>
+    </section>
+  );
+}
