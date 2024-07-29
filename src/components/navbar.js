@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import styles from "@/scss/comp.module.scss";
 import Link from "next/link";
 import logo from "../assets/cti_logo.png";
@@ -12,8 +13,25 @@ const Logo = () => {
 };
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
       <Logo />
       <ul>
         <li>
@@ -27,6 +45,9 @@ export default function Navbar() {
         </li>
         <li>
           <Link href="/prices">Prices</Link>
+        </li>
+        <li>
+          <Link href="/products">Products</Link>
         </li>
         <li>
           <Link href="https://waiver.smartwaiver.com/w/5dc496b7cf021/web/">
