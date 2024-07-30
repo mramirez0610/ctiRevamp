@@ -1,11 +1,11 @@
 import price_data from "@/data/prices.json";
-import styles from "@/scss/comp.module.scss";
+import styles from "@/scss/components/prices.module.scss";
 
 export default function Prices() {
   const prices = price_data.prices;
 
   return (
-    <section>
+    <section className={styles.content}>
       <div className={styles.prices}>
         <h1>Our Prices</h1>
         <div className={styles.cards}>

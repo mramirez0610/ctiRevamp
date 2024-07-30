@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import styles from "@/scss/comp.module.scss";
+import styles from "@/scss/components/hero.module.scss";
 
 import photo1 from "../assets/photo0.png";
 import photo2 from "../assets/photo1.png";

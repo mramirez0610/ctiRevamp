@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "@/scss/comp.module.scss";
+import styles from "@/scss/components/navbar.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../assets/cti_logo.png";
