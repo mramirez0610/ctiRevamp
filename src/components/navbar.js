@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "@/scss/comp.module.scss";
 import Link from "next/link";
-import logo from "../assets/cti_logo.png";
 import Image from "next/image";
+import logo from "../assets/cti_logo.png";
 
 const Logo = () => {
   return (
@@ -42,9 +42,6 @@ export default function Navbar() {
         </li>
         <li>
           <Link href="/parties">Parties</Link>
-        </li>
-        <li>
-          <Link href="/prices">Prices</Link>
         </li>
         <li>
           <Link href="/products">Products</Link>

@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import styles from "@/scss/comp.module.scss";
 
 import photo1 from "../assets/photo0.png";
@@ -68,7 +68,9 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className={styles.scroll}>Scroll For More Info</div>
+          <div className={styles.scroll}>
+            <span>Scroll For More Info</span>
+          </div>
         </div>
       ))}
     </div>
