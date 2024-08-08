@@ -18,7 +18,7 @@
     background-color: $primary-color;
   }
 
-  .navSection {
+  .webNav {
     scale: 0.97;
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     display: flex;
@@ -30,7 +30,7 @@
       scale: 1;
     }
 
-    ul {
+    .wNav {
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -54,10 +54,50 @@
       }
     }
   }
+
+  .mobileNav {
+    display: none;
+
+    .hamburger {
+      display: none;
+      .line {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+      }
+    }
+
+    .mNav {
+      li {
+        a {
+          color: white;
+          text-decoration: none;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          padding: 20% 30%;
+          border-radius: 5px;
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
   .navbar {
     padding: 0 4%;
+
+    .webNav {
+      display: none;
+    }
+
+    .mobileNav {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
   }
 }
