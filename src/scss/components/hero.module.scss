@@ -24,6 +24,28 @@
     font-weight: 20;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
+
+    .intro {
+      p {
+        font-size: 1.3rem;
+        font-weight: 200;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .waiver {
+      .button {
+        width: 30%;
+        height: 6vh;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary-color;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+    }
   }
 
   .scroll {
@@ -40,6 +62,14 @@
     .greet {
       width: 90vw;
       font-size: 1.2rem;
+
+      .waiver {
+        .button {
+          width: 60%;
+          height: 6vh;
+          font-size: 1rem;
+        }
+      }
     }
   }
 }

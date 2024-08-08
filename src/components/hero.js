@@ -62,7 +62,7 @@ export default function Hero() {
 
             <div className={styles.waiver}>
               <h3>First time?</h3>
-              <button>
+              <button className={styles.button}>
                 <a href="/about">Sign Our Waiver</a>
               </button>
             </div>

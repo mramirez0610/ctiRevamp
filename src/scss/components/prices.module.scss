@@ -3,18 +3,31 @@
 .prices {
   .cards {
     display: flex;
-    justify-content: space-between;
-    gap: 2%;
-    padding: 2% 0;
+    flex-direction: column;
+    width: 100%;
+    gap: 6vh;
+
+    .header {
+      width: 100%;
+      text-align: center;
+    }
 
     .card {
       width: 30%;
       height: 40vh;
       margin: 0 auto;
       padding: 3% 2%;
-      border-radius: 5px;
-      border: 1px solid rgba($color: #fff, $alpha: 0.1);
-      box-shadow: 0 0 10px rgba($color: #fff, $alpha: 0.1);
+      border-radius: 15px;
+      border: 1px solid rgba($color: #000, $alpha: 0.1);
+      box-shadow: 0 0 10px rgba($color: #000, $alpha: 0.1);
+    }
+
+    .dayUse {
+      display: flex;
+    }
+
+    .memberships {
+      display: flex;
     }
   }
 }
@@ -26,6 +39,24 @@
       .card {
         width: 100%;
         margin: 5% auto;
+      }
+
+      .dayUse {
+        flex-direction: column;
+      }
+      .memberships {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .prices {
+    .cards {
+      .card {
+        border: 1px solid rgba($color: #fff, $alpha: 0.1);
+        box-shadow: 0 0 10px rgba($color: #fff, $alpha: 0.1);
       }
     }
   }
