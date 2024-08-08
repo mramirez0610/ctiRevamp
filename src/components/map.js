@@ -44,7 +44,7 @@ function MapComponent() {
         }
       );
     }
-  }, []);
+  }, [navigator.geolocation]);
 
   useEffect(() => {
     if (!directionsService || !directionsRenderer) return;
@@ -98,21 +98,25 @@ function MapComponent() {
       <p style={{ fontSize: ".3em", marginBottom: ".3em" }}>
         Duration: {leg?.duration?.text}
       </p>
-      <ul>
-        {routes.map((route, index) => (
-          <li
-            key={route.summary}
-            style={{ fontSize: ".3rem", marginBottom: ".3em" }}
-          >
-            <button
-              onClick={() => setRouteIndex(index)}
-              style={{ fontSize: ".3rem" }}
+      {routes.length > 0 ? (
+        <ul>
+          {routes.map((route, index) => (
+            <li
+              key={route.summary}
+              style={{ fontSize: ".3rem", marginBottom: ".3em" }}
             >
-              {route.summary}
-            </button>
-          </li>
-        ))}
-      </ul>
+              <button
+                onClick={() => setRouteIndex(index)}
+                style={{ fontSize: ".3rem" }}
+              >
+                {route.summary}
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No routes found</p>
+      )}
     </div>
   );
 }
