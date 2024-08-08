@@ -1,16 +1,17 @@
-import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import styles from "@/scss/components/hero.module.scss";
 
-import Climb_Time_Indy_Logo from "../assets/Climb_Time_Indy_Logo_Old.jpg";
-import climber_on_Maple from "../assets/climber_on_Maple.jpg";
-import Cave_Climbing_Image from "../assets/Cave_Climbing_Image.jpg";
-import Shoe_Rack from "../assets/Shoe_Rack.jpg";
+import photo1 from "../assets/photo0.png";
+import photo2 from "../assets/photo1.png";
+import photo3 from "../assets/photo2.png";
+import photo4 from "../assets/photo3.png";
 
 const images = [
-  { src: Climb_Time_Indy_Logo, name: "Climb Time Indy Logo" },
-  { src: climber_on_Maple, name: "climber_on_Maple" },
-  { src: Cave_Climbing_Image, name: "Cave Climbing Image" },
-  { src: Shoe_Rack, name: "Shoe Rack" },
+  { src: photo1, name: "photo1" },
+  { src: photo2, name: "photo2" },
+  { src: photo3, name: "photo3" },
+  { src: photo4, name: "photo4" },
 ];
 
 const interval = 5000;
@@ -27,14 +28,7 @@ export default function Hero() {
   }, [images.length, interval]);
 
   return (
-    <div
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "300px",
-        overflow: "hidden",
-      }}
-    >
+    <div className={styles.hero}>
       {images.map((image, index) => (
         <div
           key={index}
@@ -51,9 +45,32 @@ export default function Hero() {
           <Image
             src={image.src}
             alt={`${image.name}`}
-            height={120}
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            height={0}
+            width={0}
+            className={styles.img}
           />
+
+          <div className={styles.greet}>
+            <div className={styles.intro}>
+              <h2>Welcome to Climb Time Indy</h2>
+              <p>
+                Climb Time Indy is the best climbing gym in Indianapolis. We
+                offer a variety of climbing walls, fitness classes, and gear for
+                sale. Fun for all ages and abilities!
+              </p>
+            </div>
+
+            <div className={styles.waiver}>
+              <h3>First time?</h3>
+              <button>
+                <a href="/about">Sign Our Waiver</a>
+              </button>
+            </div>
+          </div>
+
+          <div className={styles.scroll}>
+            <span>Scroll For More Info</span>
+          </div>
         </div>
       ))}
     </div>
