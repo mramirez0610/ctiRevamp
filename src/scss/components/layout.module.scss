@@ -5,3 +5,9 @@
     margin: 0 auto;
   }
 }
+
+:global(.main) {
+  .content {
+    background-color: red;
+  }
+}

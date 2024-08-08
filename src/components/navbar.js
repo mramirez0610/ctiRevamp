@@ -7,7 +7,13 @@ import logo from "../assets/cti_logo.png";
 const Logo = () => {
   return (
     <div>
-      <Image src={logo} height={40} width={40} alt="Climb Time Indy Logo" />
+      <Image
+        src={logo}
+        height={40}
+        width={40}
+        // layout="responsive"
+        alt="Climb Time Indy Logo"
+      />
     </div>
   );
 };
@@ -32,26 +38,30 @@ export default function Navbar() {
 
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
-      <Logo />
-      <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-        <li>
-          <Link href="/parties">Parties</Link>
-        </li>
-        <li>
-          <Link href="/products">Products</Link>
-        </li>
-        <li>
-          <Link href="https://waiver.smartwaiver.com/w/5dc496b7cf021/web/">
-            Waiver
-          </Link>
-        </li>
-      </ul>
+      <div
+        className={`${styles.navSection} ${scrolled ? styles.scrolled : ""}`}
+      >
+        <Logo />
+        <ul>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Link href="/parties">Parties</Link>
+          </li>
+          <li>
+            <Link href="/products">Products</Link>
+          </li>
+          <li>
+            <Link href="https://waiver.smartwaiver.com/w/5dc496b7cf021/web/">
+              Waiver
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }
