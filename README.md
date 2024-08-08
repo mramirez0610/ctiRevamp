@@ -35,3 +35,4 @@
 ## Brandon notes
 
 - Change the directions grabber to a Card that has a button that grabs directions instead of automatically grabbing directions
+- Change styling to scss and remove it from inline styles
