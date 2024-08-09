@@ -38,11 +38,35 @@ export default function Navbar() {
 
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
-      <div
-        className={`${styles.navSection} ${scrolled ? styles.scrolled : ""}`}
-      >
+      <div className={styles.mobileNav}>
+        <div className={styles.hamburger}>
+          <div className={styles.line}></div>
+          <div className={styles.line}></div>
+          <div className={styles.line}></div>
+        </div>
+        <ul className={styles.mNav}>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Link href="/parties">Parties</Link>
+          </li>
+          <li>
+            <Link href="/products">Products</Link>
+          </li>
+          <li>
+            <Link href="https://waiver.smartwaiver.com/w/5dc496b7cf021/web/">
+              Waiver
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <div className={`${styles.webNav} ${scrolled ? styles.scrolled : ""}`}>
         <Logo />
-        <ul>
+        <ul className={styles.wNav}>
           <li>
             <Link href="/">Home</Link>
           </li>
