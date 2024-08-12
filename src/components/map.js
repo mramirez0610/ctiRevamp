@@ -7,6 +7,7 @@ import {
   AdvancedMarker,
   Pin,
 } from "@vis.gl/react-google-maps";
+import styles from "@/scss/components/map.module.scss";
 
 import { useEffect, useState } from "react";
 
@@ -18,7 +19,7 @@ function MapComponent() {
 
   // Function to handle marker click
   const handleMarkerClick = () => {
-    const googleMapsUrl = `https://www.google.com/maps?q=${markerPosition.lat},${markerPosition.lng}`;
+    const googleMapsUrl = `https://www.google.com/maps?q=${placeNameToGeocode}`;
     window.open(googleMapsUrl, "_blank"); // Open in new tab
   };
 
@@ -50,28 +51,9 @@ function MapComponent() {
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "space-between",
-        backgroundColor: "rgba(0, 0, 0, 0.7)",
-        position: "absolute",
-        bottom: "10px",
-        left: "10px",
-        padding: "10px",
-        borderRadius: "8px",
-        height: "50%",
-        width: "30%",
-        zIndex: 1,
-      }}
-    >
-      <h2 style={{ fontSize: "2vw" }}>Climb Time Indy</h2>
-      <p style={{ fontSize: "1.5vw" }}>
-        8750 Corporation Dr, Indianapolis, IN 46256
-      </p>
+    <div className={styles.mapCardComponent}>
+      <h2>Climb Time Indy</h2>
+      <p>8750 Corporation Dr, Indianapolis, IN 46256</p>
       <AdvancedMarker
         position={markerPosition}
         map={map}
@@ -84,21 +66,29 @@ function MapComponent() {
 
 export default function MapDisplay() {
   const position = { lat: 39.91562, lng: -86.039279 };
+  const mapOptions = {
+    disableDefaultUI: false,
+    zoomControl: true,
+    mapTypeControl: false,
+    streetViewControl: false,
+    fullscreenControl: false,
+    scaleControl: false,
+    rotateControl: false,
+    draggable: true,
+    scrollwheel: true,
+    disableDoubleClickZoom: false,
+    keyboardShortcuts: false,
+  };
+
   return (
-    <div
-      style={{
-        height: "200px",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <div className={styles.mapContainer}>
       <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
         <Map
           mapId={process.env.NEXT_PUBLIC_MAP_ID}
           defaultZoom={9}
           defaultCenter={position}
+          options={mapOptions}
+          className={styles.mapComponent}
         >
           <MapComponent />
         </Map>
