@@ -6,7 +6,7 @@
 - [x] add contact page w phone number, email, and social media links and map location
 - [ ] Rock Gym Api Integration
 - [x] Add a Map
-- [ ] ability to grab directions directly from the map
+- [x] ability to grab directions directly from the map
 - [ ] Add a Calendar
 - [ ] Add a Schedule
 
@@ -34,5 +34,5 @@
 
 ## Brandon notes
 
-- Change the directions grabber to a Card that has a button that grabs directions instead of automatically grabbing directions
-- Change styling to scss and remove it from inline styles
+- [x]Change the directions grabber to a Card that has a button that grabs directions instead of automatically grabbing directions
+- [x]Change styling to scss and remove it from inline styles
