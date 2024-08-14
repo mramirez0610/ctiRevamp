@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@googlemaps/markerclusterer": "^2.5.3",
+    "@phosphor-icons/react": "^2.1.7",
     "@vis.gl/react-google-maps": "^1.1.0",
     "deck.gl": "^9.0.23",
     "next": "^14.2.5",

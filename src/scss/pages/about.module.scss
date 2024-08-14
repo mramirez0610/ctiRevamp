@@ -1,0 +1,117 @@
+@use "../all" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.aboutContainerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .aboutPhotoContainer {
+      flex-shrink: 0;
+      height: auto;
+      max-width: 30%;
+      overflow: hidden;
+    }
+    .aboutTextContainer {
+      display: flex;
+      flex-direction: column;
+      .headerText {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      .paragraphText {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+}
+.hrLine {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+.divLineVertical {
+  border-left: 3px solid #1d4283;
+  align-self: stretch;
+  width: 1px;
+  display: block;
+  padding-top: 10%;
+  padding-bottom: 1em;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.socialMediaButton {
+    background-color: inherit;
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  &:hover {
+    background-color: #1d4283;
+    .socialMediaIcon {
+      fill: black;
+    }
+  }
+  .socialMediaIcon {
+    size: 42px;
+    fill: white;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .aboutContainerContent {
+    .aboutPhotoContainer {
+      max-width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
+    .aboutContainerContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        .aboutPhotoContainer {
+          flex-shrink: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          max-width: 100%;
+        }
+        .aboutTextContainer {
+          display: flex;
+          flex-direction: column;
+          .headerText {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+          }
+          .paragraphText {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+        }
+    }
+    .divLineVertical {
+      display: none;
+    }
+  }
