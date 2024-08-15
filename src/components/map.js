@@ -85,7 +85,7 @@ export default function MapDisplay() {
       <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
         <Map
           mapId={process.env.NEXT_PUBLIC_MAP_ID}
-          defaultZoom={9}
+          defaultZoom={13}
           defaultCenter={position}
           options={mapOptions}
           className={styles.mapComponent}
