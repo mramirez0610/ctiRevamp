@@ -1,5 +1,6 @@
 import Hero from "@/components/hero";
 import Prices from "@/components/prices";
+import Head from "next/head";
 
 const types = [
   "Bouldering",
@@ -13,6 +14,9 @@ const types = [
 export default function Home() {
   return (
     <>
+      <Head>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+      </Head>
       <Hero />
       <Prices />
     </>

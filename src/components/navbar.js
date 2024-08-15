@@ -93,6 +93,11 @@ export default function Navbar() {
                 Waiver
               </Link>
             </li>
+            <li>
+              <Link href="https://cti-revamp.netlify.app/admin/index.html">
+                Admin
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
