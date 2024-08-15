@@ -69,7 +69,7 @@ export default function Hero() {
           </div>
 
           <div className={styles.scroll}>
-            <span>Scroll For More Info</span>
+            <span>Scroll For Rates</span>
           </div>
         </div>
       ))}

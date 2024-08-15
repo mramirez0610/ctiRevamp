@@ -54,33 +54,66 @@
       }
     }
   }
+}
 
-  .mobileNav {
+.active {
+  // styles for the active class
+  display: block !important ;
+}
+
+.mNavbar {
+  display: none;
+  position: fixed;
+  background-color: transparent;
+  transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  align-items: center;
+  padding: 0 8%;
+  height: 10vh;
+  width: 100%;
+  z-index: 101;
+  justify-content: space-between;
+
+  &.scrolled {
+    background-color: $primary-color;
+  }
+
+  .hamburger {
     display: none;
 
-    .hamburger {
-      display: none;
-      .line {
-        width: 30px;
-        height: 3px;
-        background-color: white;
-        margin: 5px;
-      }
+    .line {
+      width: 30px;
+      height: 3px;
+      background-color: white;
+      margin: 5px;
     }
+  }
+}
 
-    .mNav {
-      li {
-        a {
-          color: white;
-          text-decoration: none;
-          font-weight: 600;
-          transition: all 0.3s ease;
-          padding: 20% 30%;
-          border-radius: 5px;
-          &:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-          }
-        }
+.mobileNav {
+  display: none;
+  position: fixed;
+  background-color: $primary-color;
+  transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  height: 90vh;
+  z-index: 102;
+  margin-top: 10vh;
+
+  .mNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    height: 100%;
+    li {
+      list-style: none;
+      font-size: 1.5rem;
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border-radius: 5px;
       }
     }
   }
@@ -88,16 +121,24 @@
 
 @media (max-width: 768px) {
   .navbar {
+    display: none;
     padding: 0 4%;
 
     .webNav {
       display: none;
     }
+  }
 
-    .mobileNav {
-      display: flex;
-      align-items: center;
-      width: 100%;
+  .mNavbar {
+    display: flex;
+    .hamburger {
+      display: block;
     }
+  }
+
+  .mobileNav {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 }

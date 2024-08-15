@@ -20,6 +20,7 @@ const Logo = () => {
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileNav, setMobileNav] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,14 +37,22 @@ export default function Navbar() {
     };
   }, []);
 
+  const handleMobileNav = () => {
+    setMobileNav(!mobileNav);
+    console.log(mobileNav);
+  };
+
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
-      <div className={styles.mobileNav}>
-        <div className={styles.hamburger}>
+    <>
+      <div className={`${styles.mNavbar} ${scrolled ? styles.scrolled : ""}`}>
+        <Logo />
+        <div className={styles.hamburger} onClick={handleMobileNav}>
           <div className={styles.line}></div>
           <div className={styles.line}></div>
           <div className={styles.line}></div>
         </div>
+      </div>
+      <div className={`${styles.mobileNav} ${mobileNav ? styles.active : ""}`}>
         <ul className={styles.mNav}>
           <li>
             <Link href="/">Home</Link>
@@ -64,28 +73,30 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-      <div className={`${styles.webNav} ${scrolled ? styles.scrolled : ""}`}>
-        <Logo />
-        <ul className={styles.wNav}>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-          <li>
-            <Link href="/parties">Parties</Link>
-          </li>
-          <li>
-            <Link href="/products">Products</Link>
-          </li>
-          <li>
-            <Link href="https://waiver.smartwaiver.com/w/5dc496b7cf021/web/">
-              Waiver
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
+        <div className={`${styles.webNav} ${scrolled ? styles.scrolled : ""}`}>
+          <Logo />
+          <ul className={styles.wNav}>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/about">About</Link>
+            </li>
+            <li>
+              <Link href="/parties">Parties</Link>
+            </li>
+            <li>
+              <Link href="/products">Products</Link>
+            </li>
+            <li>
+              <Link href="https://waiver.smartwaiver.com/w/5dc496b7cf021/web/">
+                Waiver
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </>
   );
 }
