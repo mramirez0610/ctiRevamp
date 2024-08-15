@@ -18,5 +18,10 @@
     "react-dom": "^18",
     "sass": "^1.77.8",
     "styled-components": "6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-react": "^7.24.7",
+    "frontmatter-markdown-loader": "^3.7.0"
   }
 }
