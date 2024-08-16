@@ -20,7 +20,7 @@ const Logo = () => {
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [mobileNav, setMobileNav] = useState(true);
+  const [mobileNav, setMobileNav] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
