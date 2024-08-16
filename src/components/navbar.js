@@ -39,7 +39,6 @@ export default function Navbar() {
 
   const handleMobileNav = () => {
     setMobileNav(!mobileNav);
-    console.log(mobileNav);
   };
 
   return (
@@ -92,6 +91,11 @@ export default function Navbar() {
             <li>
               <Link href="https://waiver.smartwaiver.com/w/5dc496b7cf021/web/">
                 Waiver
+              </Link>
+            </li>
+            <li>
+              <Link href="https://cti-revamp.netlify.app/admin/index.html">
+                Admin
               </Link>
             </li>
           </ul>
