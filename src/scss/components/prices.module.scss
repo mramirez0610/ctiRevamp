@@ -13,13 +13,28 @@
     }
 
     .card {
-      width: 30%;
-      height: 40vh;
+      width: 40%;
+      height: 50vh;
       margin: 0 auto;
-      padding: 3% 2%;
       border-radius: 15px;
       border: 1px solid rgba($color: #000, $alpha: 0.1);
       box-shadow: 0 0 10px rgba($color: #000, $alpha: 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2vh;
+
+      .inner {
+        background-color: red;
+        width: 90%;
+        height: 70%;
+        border-radius: 20px 20px 0 0;
+        margin: 0 auto;
+        position: relative;
+        padding: 2vh 2vh;
+        bottom: 0;
+      }
     }
 
     .dayUse {

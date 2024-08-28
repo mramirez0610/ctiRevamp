@@ -2,7 +2,7 @@ export default {
   webpack: (cfg) => {
     // Existing loader for .md files
     cfg.module.rules.push({
-      test: /\.md$/,
+      test: /\.mdx$/,
       loader: "frontmatter-markdown-loader",
       options: { mode: ["react-component"] },
     });
