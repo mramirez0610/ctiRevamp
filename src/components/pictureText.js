@@ -3,7 +3,6 @@ import ImageComponent from "@/components/imageComponent";
 import { useEffect, useState } from "react";
 
 export function PictureLeftTextRight({ picture, text }) {
-  console.log(picture);
   const [image, setImage] = useState();
   useEffect(() => {
     import(`@/assets/${picture.name}.png`).then((img) => {
@@ -31,7 +30,6 @@ export function PictureLeftTextRight({ picture, text }) {
 }
 
 export function PictureRightTextLeft({ picture, text }) {
-  console.log(picture);
   const [image, setImage] = useState();
   useEffect(() => {
     import(`@/assets/${picture.name}.png`).then((img) => {
