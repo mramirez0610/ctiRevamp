@@ -51,16 +51,14 @@ function MapComponent() {
   }, []);
 
   return (
-    <div className={styles.mapCardComponent}>
-      <h2>Climb Time Indy</h2>
-      <p>8750 Corporation Dr, Indianapolis, IN 46256</p>
+    <>
       <AdvancedMarker
         position={markerPosition}
         map={map}
         title="Climb Time Indy"
         onClick={handleMarkerClick}
       />
-    </div>
+    </>
   );
 }
 

@@ -13,6 +13,10 @@ import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import SocialMediaButtons from "@/components/socialMediaButtons";
 import ImageComponent from "@/components/imageComponent";
+import {
+  PictureLeftTextRight,
+  PictureRightTextLeft,
+} from "@/components/pictureText";
 
 const components = {
   ImageComponent: (props) => (
@@ -47,6 +51,8 @@ const components = {
       </div>
     </div>
   ),
+  PictureLeftTextRight: (props) => <PictureLeftTextRight {...props} />,
+  PictureRightTextLeft: (props) => <PictureRightTextLeft {...props} />,
   MapDisplay,
   SocialMediaButtons,
   div: (props) => <div className={styles.container}>{props.children}</div>,
