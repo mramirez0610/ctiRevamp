@@ -9,17 +9,42 @@ collections:
     files:
       - label: "Home"
         name: "home"
-        file: "content/ctiHome.md"
+        file: "content/ctiHome.mdx"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Cats"
-            name: "cats"
+          - label: "Day Passes with Gear"
+            name: "day_gear"
             widget: list
             fields:
               - { label: "Name", name: "name", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Description", name: "desc", widget: "text" }
+              - { label: "Price", name: "price", widget: "number" }
+          - label: "Day Passes without Gear"
+            name: "day_noGear"
+            widget: list
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+              - { label: "Price", name: "price", widget: "number" }
+          - label: "Bundles"
+            name: "bundle"
+            widget: object
+            fields:
+              - label: "Passes"
+                name: "passes"
+                widget: list
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+                  - { label: "Price", name: "price", widget: "number" }
+              - label: "Memberships"
+                name: "memberships"
+                widget: list
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+                  - { label: "Price", name: "price", widget: "number" }
       - label: "TestMDX"
         name: "testmdx"
         file: "content/newToClimbing.mdx"
