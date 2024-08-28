@@ -1,0 +1,27 @@
+@use "../all" as *;
+
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socialMediaButton {
+  background-color: inherit;
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+&:hover {
+  background-color: #1d4283;
+  .socialMediaIcon {
+    fill: black;
+  }
+}
+.socialMediaIcon {
+  size: 42px;
+  fill: white;
+}
+}
