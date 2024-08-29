@@ -13,20 +13,24 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Day Passes with Gear"
-            name: "day_gear"
-            widget: list
+          - label: "Day Rates"
+            name: "day"
+            widget: object
             fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Description", name: "desc", widget: "text" }
-              - { label: "Price", name: "price", widget: "number" }
-          - label: "Day Passes without Gear"
-            name: "day_noGear"
-            widget: list
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Description", name: "desc", widget: "text" }
-              - { label: "Price", name: "price", widget: "number" }
+              - label: "Day Passes with Gear"
+                name: "day_gear"
+                widget: list
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+                  - { label: "Price", name: "price", widget: "number" }
+              - label: "Day Passes without Gear"
+                name: "day_noGear"
+                widget: list
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+                  - { label: "Price", name: "price", widget: "number" }
           - label: "Bundles"
             name: "bundle"
             widget: object
