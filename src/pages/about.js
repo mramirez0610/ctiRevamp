@@ -204,10 +204,19 @@ export default function AboutPage({ source }) {
 
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), "content", "about.mdx");
-  const fileContent = await fs.readFile(filePath, "utf-8");
+  let fileContent;
+  try {
+    fileContent = await fs.readFile(filePath, "utf-8");
+  } catch (error) {
+    console.error("Error reading fileContent:", error);
+  }
   const { data: attributes, content } = matter(fileContent);
-
-  const mdxSource = await serialize(content);
+  let mdxSource;
+  try {
+    mdxSource = await serialize(content);
+  } catch (error) {
+    console.error("Error serializing content:", error);
+  }
 
   return {
     props: {
