@@ -12,7 +12,7 @@ import path from "path";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import SocialMediaButtons from "@/components/socialMediaButtons";
-import ImageComponent from "@/components/imageComponent";
+// import ImageComponent from "@/components/imageComponent";
 import {
   PictureLeftTextRight,
   PictureRightTextLeft,
@@ -23,12 +23,12 @@ const components = {
     <div className={styles.container}>
       <div className={styles.aboutContainerContent}>
         <div className={styles.aboutPhotoContainer}>
-          <ImageComponent
+          {/* <ImageComponent
             {...props}
             photo={photo1}
             alt="photo1"
             className={styles.photoContainer}
-          />
+          /> */}
         </div>
         <div className={styles.divLineVertical}></div>
         <div className={styles.aboutTextContainer}>
@@ -51,8 +51,8 @@ const components = {
       </div>
     </div>
   ),
-  PictureLeftTextRight: (props) => <PictureLeftTextRight {...props} />,
-  PictureRightTextLeft: (props) => <PictureRightTextLeft {...props} />,
+  // PictureLeftTextRight: (props) => <PictureLeftTextRight {...props} />,
+  // PictureRightTextLeft: (props) => <PictureRightTextLeft {...props} />,
   MapDisplay,
   SocialMediaButtons,
   div: (props) => <div className={styles.container}>{props.children}</div>,
