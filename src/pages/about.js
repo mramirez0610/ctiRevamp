@@ -58,8 +58,12 @@ const components = {
   div: (props) => <div className={styles.container}>{props.children}</div>,
 };
 
+// export default function AboutPage({ source }) {
+//   return <MDXRemote {...source} components={components} />;
+// }
+
 export default function AboutPage({ source }) {
-  return <MDXRemote {...source} components={components} />;
+  return <MDXRemote {...source} />;
 }
 
 // export default function About({ attributes, mdxSource }) {
