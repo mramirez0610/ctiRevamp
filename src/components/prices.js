@@ -1,11 +1,8 @@
-import price_data from "@/data/prices.json";
 import styles from "@/scss/components/prices.module.scss";
 
 export default function Prices(props) {
   const day = props.day;
   const bundle = props.bundle;
-
-  console.log(day, bundle);
 
   return (
     <section>

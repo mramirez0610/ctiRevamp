@@ -6,6 +6,8 @@ public_folder: img
 collections:
   - name: "pages"
     label: "Pages"
+    extension: "mdx"
+    format: "frontmatter"
     files:
       - label: "Home"
         name: "home"
@@ -18,14 +20,14 @@ collections:
             widget: object
             fields:
               - label: "Day Passes with Gear"
-                name: "day_gear"
+                name: "gear"
                 widget: list
                 fields:
                   - { label: "Name", name: "name", widget: "string" }
                   - { label: "Description", name: "desc", widget: "text" }
                   - { label: "Price", name: "price", widget: "number" }
               - label: "Day Passes without Gear"
-                name: "day_noGear"
+                name: "noGear"
                 widget: list
                 fields:
                   - { label: "Name", name: "name", widget: "string" }
