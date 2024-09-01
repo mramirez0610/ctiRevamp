@@ -59,7 +59,16 @@ const components = {
 };
 
 export default function AboutPage({ source }) {
-  return <MDXRemote {...source} components={components} />;
+  try {
+    return (
+      <>
+        <MDXRemote {...source} components={components} />
+      </>
+    );
+  } catch (error) {
+    console.error("Error rendering AboutPage:", error);
+    return <div>Something went wrong. Please try again later.</div>;
+  }
 }
 
 // export default function About({ attributes, mdxSource }) {
