@@ -1,4 +1,3 @@
-import MapDisplay from "@/components/map";
 import styles from "@/scss/pages/about.module.scss";
 import { FacebookLogo, InstagramLogo } from "@phosphor-icons/react";
 
@@ -53,7 +52,6 @@ const components = {
   ),
   PictureLeftTextRight: (props) => <PictureLeftTextRight {...props} />,
   PictureRightTextLeft: (props) => <PictureRightTextLeft {...props} />,
-  MapDisplay,
   SocialMediaButtons,
   div: (props) => <div className={styles.container}>{props.children}</div>,
 };
