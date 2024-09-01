@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 export function PictureLeftTextRight({ picture, text }) {
   const [image, setImage] = useState();
   useEffect(() => {
-    import(`@/assets/${picture.name}.png`).then((img) => {
+    import(`../../public/img/${picture.name}.webp`).then((img) => {
       setImage(img);
     });
   }, [picture]);
@@ -32,7 +32,7 @@ export function PictureLeftTextRight({ picture, text }) {
 export function PictureRightTextLeft({ picture, text }) {
   const [image, setImage] = useState();
   useEffect(() => {
-    import(`@/assets/${picture.name}.png`).then((img) => {
+    import(`../../public/img/${picture.name}.webp`).then((img) => {
       setImage(img);
     });
   }, [picture]);

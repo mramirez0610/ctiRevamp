@@ -1,10 +1,10 @@
 import styles from "@/scss/components/navigationCards.module.scss";
 import CardComponent from "@/components/cardComponent";
 import ImageComponent from "./imageComponent";
-import photo0 from "../assets/photo0.png";
-import photo1 from "../assets/photo1.png";
-import photo2 from "../assets/photo2.png";
-import photo3 from "../assets/photo3.png";
+import photo0 from "../../public/img/photo0.webp";
+import photo1 from "../../public/img/photo1.webp";
+import photo2 from "../../public/img/photo2.webp";
+import photo3 from "../../public/img/photo3.webp";
 
 export default function NavigationCards() {
   return (
