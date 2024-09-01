@@ -6,6 +6,7 @@ import { promises as fs } from "fs";
 import { useEffect, useState } from "react";
 import matter from "gray-matter";
 import path from "path";
+import NavigationCards from "@/components/navigationCards";
 
 export default function Home({ attributes }) {
   const [stateAttributes, setStateAttributes] = useState(attributes);
@@ -23,6 +24,7 @@ export default function Home({ attributes }) {
       </Head>
       <Hero />
       <Prices {...stateAttributes} />
+      <NavigationCards />
     </>
   );
 }
