@@ -4,6 +4,7 @@ import path from "path";
 import { promises as fs } from "fs";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
+import MapDisplay from "@/components/map";
 
 export default function Parties({ attributes, mdxSource }) {
   const [stateAttributes, setStateAttributes] = useState(attributes);
@@ -16,6 +17,7 @@ export default function Parties({ attributes, mdxSource }) {
 
   return (
     <section>
+      <MapDisplay />
       <article>
         <h1>{title}</h1>
         <ul>
