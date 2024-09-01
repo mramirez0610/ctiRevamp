@@ -1,6 +1,5 @@
 @use "../all" as *;
 
-
 .gridContainer {
   display: grid;
   grid-template-columns: 33vw 33vw 33vw;
@@ -15,6 +14,7 @@
 }
 .cardContainer {
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;

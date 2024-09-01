@@ -23,7 +23,7 @@ export default function Home({ attributes }) {
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
       <Hero />
-      <Prices {...stateAttributes} />
+      {/* <Prices {...stateAttributes} /> */}
       <NavigationCards />
     </>
   );
