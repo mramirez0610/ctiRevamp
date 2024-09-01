@@ -20,3 +20,19 @@
   justify-content: center;
   background-color: rgba(155, 155, 155, 0.1);
 }
+
+@media (max-width: 768px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: auto auto auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto auto auto; 
+  }
+}
