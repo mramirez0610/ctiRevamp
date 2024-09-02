@@ -5,7 +5,7 @@ import { promises as fs } from "fs";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 
-export default function Parties({ attributes, mdxSource }) {
+export default function Memberships({ attributes, mdxSource }) {
   const [stateAttributes, setStateAttributes] = useState(attributes);
 
   useEffect(() => {
@@ -13,7 +13,6 @@ export default function Parties({ attributes, mdxSource }) {
   }, [attributes]);
 
   const { title, examples } = stateAttributes;
-
   return (
     <section>
       <article>
@@ -34,7 +33,7 @@ export default function Parties({ attributes, mdxSource }) {
 }
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "content", "newToClimbing.mdx");
+  const filePath = path.join(process.cwd(), "content", "memberships.mdx");
   const fileContent = await fs.readFile(filePath, "utf-8");
   const { data: attributes, content } = matter(fileContent);
   const mdxSource = await serialize(content);
