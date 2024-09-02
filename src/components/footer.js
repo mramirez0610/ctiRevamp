@@ -1,8 +1,10 @@
 import styles from "@/scss/components/footer.module.scss";
+import MapDisplay from "./map";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
+      <MapDisplay />
       <p>&copy; 2024 Climb Time Indy</p>
       <p>8750 Corporation Dr, Indianapolis, IN 46256</p>
 
