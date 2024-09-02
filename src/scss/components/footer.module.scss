@@ -5,12 +5,12 @@
   position: relative;
   text-align: center;
   bottom: 0;
-  padding: 2% 0;
+  padding: 1% 0;
   border-top: 0.5px solid rgba($color: #000000, $alpha: 0.2);
 }
 
 @media (max-width: 768px) {
   .footer {
-    padding: 2% 4%;
+    padding: 2% 2%;
   }
 }
