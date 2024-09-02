@@ -15,10 +15,7 @@
   }
 }
 .card:hover {
-  box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
-  scale: 1.02;
-  transform: translate3d(0px, -5px, 0px);
-  transition: all 100ms ease-in-out;
+  scale: 1.05;
 }
 .cardTextContainer {
   display: flex;
@@ -30,6 +27,8 @@
   width: 24vw;
   height: auto;
   padding: 1vw;
+  transition: none;
+  transform: none;
 }
 .cardTitle {
   font-size: 1.5rem;
