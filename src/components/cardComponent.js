@@ -8,7 +8,6 @@ export default function CardComponent({ title, description, image }) {
 
   const handleMouseEnter = (e) => {
     boundingRef.current = e.target.getBoundingClientRect();
-    e.target.style.transform = `rotateX(0deg) rotateY(0deg)`;
   };
 
   const handleMouseMove = (e) => {
@@ -20,14 +19,15 @@ export default function CardComponent({ title, description, image }) {
     const xPercent = x / boundingRef.current.width;
     const yPercent = y / boundingRef.current.height;
 
-    const xRotation = (0.5 - xPercent) * 20;
-    const yRotation = (0.5 - yPercent) * 20;
+    const xRotation = (0.5 - xPercent) * 10;
+    const yRotation = (0.5 - yPercent) * 10;
 
     e.target.style.transform = `perspective(800px) rotateX(${-yRotation}deg) rotateY(${xRotation}deg)`;
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = (e) => {
     boundingRef.current = null;
+    e.target.style.transform = `rotateX(0deg) rotateY(0deg)`;
   };
 
   return (

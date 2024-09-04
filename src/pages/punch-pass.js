@@ -12,17 +12,17 @@ export default function PunchPass({ attributes, mdxSource }) {
     setStateAttributes(attributes);
   }, [attributes]);
 
-  const { title, examples } = stateAttributes;
+  const { title, passes } = stateAttributes;
   return (
     <section>
       <article>
         <h1>{title}</h1>
         <ul>
-          {examples.map((example, k) => (
+          {passes.map((pass, k) => (
             <li key={k}>
-              <h4>{example.name}</h4>
-              <h5>{example.price}</h5>
-              <p>{example.description}</p>
+              <h4>{pass.name}</h4>
+              <h5>{pass.price}</h5>
+              <p>{pass.description}</p>
             </li>
           ))}
         </ul>
