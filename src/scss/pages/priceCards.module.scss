@@ -5,6 +5,7 @@ section.sectionComponent {
   height: 100%;
   padding-top: 10vh;
     .pricesCards {
+      padding: 2vh 0;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -21,7 +22,7 @@ section.sectionComponent {
         -webkit-backdrop-filter: blur( 15.5px );
         border-radius: 10px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
-        width: 80vw;
+        width: 90%;
         .pricesGroupInner:nth-child(2) {
           display: flex;
           flex-direction: row;
@@ -36,16 +37,19 @@ section.sectionComponent {
           flex-direction: column;
           align-items: left;
           justify-content: top;
+
           padding: 2vw;
           width: 25vw;
-          h2 {
-            font-size: 1.5rem;
+          .priceTitle{
+            font-size: 1.2em;
             font-weight: bold;
             color: #f5c39f;
           }
-          p {
-            font-size: 1rem;
-            color: #f5c39f;
+          .priceText {
+            .priceNumber {
+              color: #f5c39f;
+            }
+            font-size: .8em;
           }
         }
       }
@@ -53,13 +57,17 @@ section.sectionComponent {
 }
 
 .imageClip {
+  height: 100%;
+  width:  100%;
+  object-fit: cover;
+  object-position: center;
   -webkit-clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0%);
   clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0%);
 }
 
 @media (max-width: 1200px) {
   section.sectionComponent {
-    font-size: 20px;
+    font-size: 26px;
   }
 }
 
@@ -71,6 +79,6 @@ section.sectionComponent {
 
 @media (max-width: 480px) {
   section.sectionComponent {
-    font-size: 16px;
+    font-size: 12px;
   }
 }

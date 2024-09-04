@@ -20,7 +20,12 @@ export default function Memberships({ attributes, mdxSource }) {
     <>
       <section className={styles.sectionComponent}>
         <article>
-          <div style={{ display: "flex", flexDirection: "row" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
             <div
               style={{
                 display: "flex",
@@ -28,27 +33,28 @@ export default function Memberships({ attributes, mdxSource }) {
                 alignItems: "left",
                 width: "50vw",
                 height: "fit-content",
+                margin: "2.5vw",
               }}
             >
-              <h1 style={{ fontWeight: "600", fontSize: "1.25rem" }}>
+              <h1 style={{ fontWeight: "600", fontSize: "1em" }}>
                 Get Unlimited Access to all our Services
               </h1>
               <p
                 style={{
                   fontWeight: "800",
                   color: "#1d4283",
-                  fontSize: "1.25rem",
+                  fontSize: "1em",
                 }}
               >
                 Climb Time Indy
                 <br />
                 Memberships
               </p>
-              <p style={{ fontWeight: "400", fontSize: ".8rem" }}>
+              <p style={{ fontWeight: "400", fontSize: ".6em" }}>
                 Climb as many times as you want for less than the cost of 3 day
                 passes. The best value in the Indianapolis climbing community.
               </p>
-              <p style={{ fontWeight: "600", fontSize: ".8rem" }}>
+              <p style={{ fontWeight: "600", fontSize: ".6em" }}>
                 Sign Up for a Climb Time Indy Membership and enjoy the benefits.
                 <br />
                 Learn more about our memberships below.
@@ -70,12 +76,19 @@ export default function Memberships({ attributes, mdxSource }) {
                 <div key={k} className={styles.pricesGroupInner}>
                   <div className={styles.pricesGroupItems}>
                     <ul>
-                      <h2>{type.title}</h2>
+                      <h1 className={styles.priceTitle}>{type.title}</h1>
                       {type.prices.map((example, k) => (
                         <div key={k}>
-                          <h4>{example.name}</h4>
-                          <h5>Price - ${example.price}</h5>
-                          <p>{example.description}</p>
+                          <p className={styles.priceText}>{example.name}</p>
+                          <p className={styles.priceText}>
+                            Price -{" "}
+                            <span className={styles.priceNumber}>
+                              ${example.price}
+                            </span>
+                          </p>
+                          <p className={styles.priceText}>
+                            {example.description}
+                          </p>
                         </div>
                       ))}
                     </ul>

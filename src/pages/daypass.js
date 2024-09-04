@@ -20,50 +20,111 @@ export default function DayPass({ attributes, mdxSource }) {
     <>
       <section className={styles.sectionComponent}>
         <article>
-          <h1>{title}</h1>
-          <div className={styles.pricesBackground}>
-            <div className={styles.test}>
-              <div className={styles.pricesCards}>
-                <div className={styles.pricesGroupOuter}>
-                  <div className={styles.pricesGroupItems}>
-                    <ul>
-                      <h2>Gear</h2>
-                      {gear.map((example, k) => (
-                        <div key={k}>
-                          <h4>{example.name}</h4>
-                          <h5>Price - {example.price}</h5>
-                          <p>{example.description}</p>
-                        </div>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className={styles.pricesGroupInner}>
-                    <div className={styles.pricesGroupItems}>
-                      <ul>
-                        <h2>No Gear</h2>
-                        {noGear.map((example, k) => (
-                          <div key={k}>
-                            <h4>{example.name}</h4>
-                            <h5>Price - {example.price}</h5>
-                            <p>{example.description}</p>
-                          </div>
-                        ))}
-                      </ul>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "left",
+                width: "50vw",
+                height: "fit-content",
+                margin: "2.5vw",
+              }}
+            >
+              <h1 style={{ fontWeight: "600", fontSize: "1em" }}>
+                Come Climb with us for a Day!
+              </h1>
+              <p
+                style={{
+                  fontWeight: "800",
+                  color: "#1d4283",
+                  fontSize: "1em",
+                }}
+              >
+                Climb Time Indy
+                <br />
+                DayPass
+              </p>
+              <p style={{ fontWeight: "400", fontSize: ".6em" }}>
+                Climb all day and try your hands at top ropes and Bouldering!
+              </p>
+              <p style={{ fontWeight: "600", fontSize: ".6em" }}>
+                Organize a group and climb with your friends.
+                <br />
+                Learn more about our daypasses below.
+              </p>
+            </div>
+            <div style={{ width: "50vw" }}>
+              <img
+                src="/img/photo3.webp"
+                alt="photo"
+                width="100%"
+                height="fit-content"
+                className={styles.imageClip}
+              />
+            </div>
+          </div>
+          <div className={styles.pricesCards}>
+            <div className={styles.pricesGroupOuter}>
+              <div className={styles.pricesGroupItems}>
+                <ul>
+                  <h1 className={styles.priceTitle}>Gear</h1>
+                  {gear.map((example, k) => (
+                    <div key={k}>
+                      <p className={styles.priceText}>{example.name}</p>
+                      <p className={styles.priceText}>
+                        Price -{" "}
+                        <span className={styles.priceNumber}>
+                          ${example.price}
+                        </span>
+                      </p>
+                      <p className={styles.priceText}>{example.description}</p>
                     </div>
-                  </div>
-                  <div className={styles.pricesGroupItems}>
-                    <ul>
-                      <h2>Individual</h2>
-                      {Individual.map((example, k) => (
-                        <div key={k}>
-                          <h4>{example.name}</h4>
-                          <h5>Price - {example.price}</h5>
-                          <p>{example.description}</p>
-                        </div>
-                      ))}
-                    </ul>
-                  </div>
+                  ))}
+                </ul>
+              </div>
+              <div className={styles.pricesGroupInner}>
+                <div className={styles.pricesGroupItems}>
+                  <ul>
+                    <h1 className={styles.priceTitle}>No Gear</h1>
+                    {noGear.map((example, k) => (
+                      <div key={k}>
+                        <p className={styles.priceText}>{example.name}</p>
+                        <p className={styles.priceText}>
+                          Price -{" "}
+                          <span className={styles.priceNumber}>
+                            ${example.price}
+                          </span>
+                        </p>
+                        <p className={styles.priceText}>
+                          {example.description}
+                        </p>
+                      </div>
+                    ))}
+                  </ul>
                 </div>
+              </div>
+              <div className={styles.pricesGroupItems}>
+                <ul>
+                  <h1 className={styles.priceTitle}>Individual</h1>
+                  {Individual.map((example, k) => (
+                    <div key={k}>
+                      <p className={styles.priceText}>{example.name}</p>
+                      <p className={styles.priceText}>
+                        Price -{" "}
+                        <span className={styles.priceNumber}>
+                          ${example.price}
+                        </span>
+                      </p>
+                      <p className={styles.priceText}>{example.description}</p>
+                    </div>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
