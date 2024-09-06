@@ -7,10 +7,6 @@ import photo1 from "../../public/img/photo1.webp";
 import photo2 from "../../public/img/photo2.webp";
 import photo3 from "../../public/img/photo3.webp";
 
-function MouseOver() {
-  console.log("Mouse Over");
-}
-
 export default function NavigationCards() {
   return (
     <div className={styles.gridContainer}>
@@ -21,7 +17,7 @@ export default function NavigationCards() {
               title="Daypass"
               description="View our rates and gear rentals"
               image={photo1}
-              link="/daypass"
+              // link="/daypass"
             />
           </Link>
         </div>

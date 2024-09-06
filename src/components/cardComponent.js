@@ -30,7 +30,6 @@ export default function CardComponent({ title, description, image }) {
     boundingRef.current = null;
     e.target.style.transform = `rotateX(0deg) rotateY(0deg)`;
     e.target.classList.remove(styles.noTransition); // Enable transition on mouse leave
-    e.target.style.transform = `rotateX(0deg) rotateY(0deg)`;
   };
 
   return (
