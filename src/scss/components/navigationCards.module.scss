@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 33vw 33vw 33vw;
   grid-template-rows: auto auto;
-  margin-top: 1%;
+  margin-top: 0.5%;
 }
 .gridItem {
   display: flex;
@@ -20,7 +20,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   perspective: 800px;
 }
 
