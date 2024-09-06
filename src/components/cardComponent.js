@@ -22,13 +22,11 @@ export default function CardComponent({ title, description, image }) {
 
     const xRotation = (0.5 - xPercent) * 10;
     const yRotation = (0.5 - yPercent) * 10;
-    const xRotation = (0.5 - xPercent) * 10;
-    const yRotation = (0.5 - yPercent) * 10;
 
     e.target.style.transform = `perspective(800px) rotateX(${-yRotation}deg) rotateY(${xRotation}deg)`;
   };
 
-  const handleMouseLeave = (ee) => {
+  const handleMouseLeave = (e) => {
     boundingRef.current = null;
     e.target.style.transform = `rotateX(0deg) rotateY(0deg)`;
     e.target.classList.remove(styles.noTransition); // Enable transition on mouse leave
