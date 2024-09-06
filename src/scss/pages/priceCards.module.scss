@@ -1,0 +1,84 @@
+@use "../all" as *;
+
+section.sectionComponent {
+  max-width: 95vw;
+  height: 100%;
+  padding-top: 10vh;
+    .pricesCards {
+      padding: 2vh 0;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .pricesGroupOuter {
+        display: flex;
+        flex-direction: row;
+        align-items: top;
+        justify-content: center;
+        background: rgba(29, 66, 131, 0.644);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.075);
+        backdrop-filter: blur( 10.5px );
+        -webkit-backdrop-filter: blur( 15.5px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        width: 90%;
+        .pricesGroupInner:nth-child(2) {
+          display: flex;
+          flex-direction: row;
+          align-items: top;
+          justify-content: center;
+          background-color: #1212127c;
+          width: 30vw;
+          border-radius: 8px;
+        }
+        .pricesGroupItems {
+          display: flex;
+          flex-direction: column;
+          align-items: left;
+          justify-content: top;
+
+          padding: 2vw;
+          width: 25vw;
+          .priceTitle{
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #f5c39f;
+          }
+          .priceText {
+            .priceNumber {
+              color: #f5c39f;
+            }
+            font-size: .8em;
+          }
+        }
+      }
+  }  
+}
+
+.imageClip {
+  height: 100%;
+  width:  100%;
+  object-fit: cover;
+  object-position: center;
+  -webkit-clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0%);
+  clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+
+@media (max-width: 1200px) {
+  section.sectionComponent {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  section.sectionComponent {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  section.sectionComponent {
+    font-size: 12px;
+  }
+}

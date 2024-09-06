@@ -8,7 +8,7 @@ export default function CardComponent({ title, description, image }) {
 
   const handleMouseEnter = (e) => {
     boundingRef.current = e.target.getBoundingClientRect();
-    e.target.classList.add(styles.noTransition); // Disable transition on mouse enter
+    e.target.style.transform = `rotateX(0deg) rotateY(0deg)`;
   };
 
   const handleMouseMove = (e) => {
@@ -22,12 +22,15 @@ export default function CardComponent({ title, description, image }) {
 
     const xRotation = (0.5 - xPercent) * 10;
     const yRotation = (0.5 - yPercent) * 10;
+    const xRotation = (0.5 - xPercent) * 10;
+    const yRotation = (0.5 - yPercent) * 10;
 
     e.target.style.transform = `perspective(800px) rotateX(${-yRotation}deg) rotateY(${xRotation}deg)`;
   };
 
-  const handleMouseLeave = (e) => {
+  const handleMouseLeave = (ee) => {
     boundingRef.current = null;
+    e.target.style.transform = `rotateX(0deg) rotateY(0deg)`;
     e.target.classList.remove(styles.noTransition); // Enable transition on mouse leave
     e.target.style.transform = `rotateX(0deg) rotateY(0deg)`;
   };
