@@ -60,7 +60,8 @@ export default function Memberships({ attributes, mdxSource }) {
                 Learn more about our memberships below.
               </p>
             </div>
-            <div style={{ width: "50vw" }}>
+            <div className={styles.blockDiv}></div>
+            <div className={styles.imageContainer}>
               <img
                 src="/img/photo1.webp"
                 alt="photo"

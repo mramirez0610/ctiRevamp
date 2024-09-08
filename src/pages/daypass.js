@@ -59,7 +59,8 @@ export default function DayPass({ attributes, mdxSource }) {
                 Learn more about our daypasses below.
               </p>
             </div>
-            <div style={{ width: "50vw" }}>
+            <div className={styles.blockDiv}></div>
+            <div className={styles.imageContainer}>
               <img
                 src="/img/photo3.webp"
                 alt="photo"

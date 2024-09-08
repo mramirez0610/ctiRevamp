@@ -20,9 +20,10 @@ section.sectionComponent {
         gap : 3vw;
         
         .pricesGroupInner {
-          box-shadow: 8px 8px rgb(31, 38, 135);
+          box-shadow: 4px 4px rgb(31, 38, 135);
           backdrop-filter: blur( 10.5px );
           -webkit-backdrop-filter: blur( 15.5px );
+          
           border-radius: 10px;
           // border: 3px solid  #1F2C42;
           width: 90%;
@@ -33,9 +34,15 @@ section.sectionComponent {
           justify-content: center;
           width: 30vw;
           border-radius: 8px;
+          transition: all 200ms ease-in-out;
         }
-        .pricesGroupInner:nth-child(2) {
-          background-color: #B8D2FF
+        .pricesGroupInner:hover {
+          box-shadow: 8px 8px rgb(31, 38, 135);
+          backdrop-filter: blur( 10.5px );
+          -webkit-backdrop-filter: blur( 15.5px );
+          transform: translateY(-1.5%) translateX(-1.5%);
+          transition: all 200ms ease-in-out;
+          
         }
         .pricesGroupItems {
           display: flex;
@@ -62,14 +69,23 @@ section.sectionComponent {
       }
   }  
 }
-
-.imageClip {
-  height: 100%;
-  width:  100%;
-  object-fit: cover;
-  object-position: center;
-  -webkit-clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0%);
-  clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0%);
+.blockDiv {
+  margin-left: 2.5vw;
+  width: 2.5vw;
+  background-color: #B8D2FF;
+  // border: solid rgb(31, 38, 135);
+  transform: skewX(-12.5deg) translateX(2vw);
+}
+.imageContainer {
+  width: 50vw;
+  .imageClip {
+    height: 100%;
+    width:  100%;
+    object-fit: cover;
+    object-position: center;
+    -webkit-clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0%);
+  }
 }
 
 @media (max-width: 1200px) {
