@@ -70,7 +70,7 @@ export default function Memberships({ attributes, mdxSource }) {
               />
             </div>
           </div>
-          <div className={styles.pricesCards}>
+          {/* <div className={styles.pricesCards}>
             <div className={styles.pricesGroupOuter}>
               {memberships.map((type, k) => (
                 <div key={k} className={styles.pricesGroupInner}>
@@ -96,8 +96,40 @@ export default function Memberships({ attributes, mdxSource }) {
                 </div>
               ))}
             </div>
+          </div> */}
+
+          <div className={styles.pricesCards}>
+            <div className={styles.pricesGroupOuter}>
+              {memberships.map((type, k) => (
+                <div key={k} className={styles.pricesGroupInner}>
+                  <div className={styles.pricesGroupItems}>
+                    <ul>
+                      <h1 className={styles.priceTitle}>{type.title}</h1>
+                      {type.prices.map((example, k) => (
+                        <div key={k}>
+                          <p className={styles.priceText}>
+                            {example.name}
+                            <br />
+                            {example?.length}
+                          </p>
+                          <p className={styles.priceText}>{example?.desc}</p>
+                          <p className={styles.priceText}>
+                            Price -{" "}
+                            <span className={styles.priceNumber}>
+                              ${example.price}
+                            </span>
+                          </p>
+                          <p className={styles.priceText}>
+                            {example.description}
+                          </p>
+                        </div>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div></div>
           <MDXRemote {...mdxSource} />
         </article>
       </section>

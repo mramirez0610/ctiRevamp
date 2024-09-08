@@ -76,7 +76,7 @@ export default function Navbar() {
         <div className={`${styles.webNav} ${scrolled ? styles.scrolled : ""}`}>
           <Logo />
           <ul className={styles.wNav}>
-            <li>
+            <li className={scrolled ? styles.scrolled : ""}>
               <Link href="/">Home</Link>
             </li>
             <li>

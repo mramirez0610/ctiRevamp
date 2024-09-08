@@ -71,22 +71,27 @@ export default function DayPass({ attributes, mdxSource }) {
           </div>
           <div className={styles.pricesCards}>
             <div className={styles.pricesGroupOuter}>
-              <div className={styles.pricesGroupItems}>
-                <ul>
-                  <h1 className={styles.priceTitle}>Gear</h1>
-                  {gear.map((example, k) => (
-                    <div key={k}>
-                      <p className={styles.priceText}>{example.name}</p>
-                      <p className={styles.priceText}>
-                        Price -{" "}
-                        <span className={styles.priceNumber}>
-                          ${example.price}
-                        </span>
-                      </p>
-                      <p className={styles.priceText}>{example.description}</p>
-                    </div>
-                  ))}
-                </ul>
+              <div className={styles.pricesGroupInner}>
+                <div className={styles.pricesGroupItems}>
+                  <ul>
+                    <h1 className={styles.priceTitle}>Gear</h1>
+                    <div className={styles.hrLine}></div>
+                    {gear.map((example, k) => (
+                      <div key={k}>
+                        <p className={styles.priceText}>{example.name}</p>
+                        <p className={styles.priceText}>
+                          Price -{" "}
+                          <span className={styles.priceNumber}>
+                            ${example.price}
+                          </span>
+                        </p>
+                        <p className={styles.priceText}>
+                          {example.description}
+                        </p>
+                      </div>
+                    ))}
+                  </ul>
+                </div>
               </div>
               <div className={styles.pricesGroupInner}>
                 <div className={styles.pricesGroupItems}>
@@ -109,22 +114,26 @@ export default function DayPass({ attributes, mdxSource }) {
                   </ul>
                 </div>
               </div>
-              <div className={styles.pricesGroupItems}>
-                <ul>
-                  <h1 className={styles.priceTitle}>Individual</h1>
-                  {Individual.map((example, k) => (
-                    <div key={k}>
-                      <p className={styles.priceText}>{example.name}</p>
-                      <p className={styles.priceText}>
-                        Price -{" "}
-                        <span className={styles.priceNumber}>
-                          ${example.price}
-                        </span>
-                      </p>
-                      <p className={styles.priceText}>{example.description}</p>
-                    </div>
-                  ))}
-                </ul>
+              <div className={styles.pricesGroupInner}>
+                <div className={styles.pricesGroupItems}>
+                  <ul>
+                    <h1 className={styles.priceTitle}>Individual</h1>
+                    {Individual.map((example, k) => (
+                      <div key={k}>
+                        <p className={styles.priceText}>{example.name}</p>
+                        <p className={styles.priceText}>
+                          Price -{" "}
+                          <span className={styles.priceNumber}>
+                            ${example.price}
+                          </span>
+                        </p>
+                        <p className={styles.priceText}>
+                          {example.description}
+                        </p>
+                      </div>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
