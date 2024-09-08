@@ -8,6 +8,7 @@ export default function CardComponent({ title, description, image }) {
 
   const handleMouseEnter = (e) => {
     boundingRef.current = e.target.getBoundingClientRect();
+    e.target.style.transform = `rotateX(0deg) rotateY(0deg)`;
   };
 
   const handleMouseMove = (e) => {
@@ -28,6 +29,7 @@ export default function CardComponent({ title, description, image }) {
   const handleMouseLeave = (e) => {
     boundingRef.current = null;
     e.target.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    e.target.classList.remove(styles.noTransition); // Enable transition on mouse leave
   };
 
   return (
