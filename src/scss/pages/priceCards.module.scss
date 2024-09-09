@@ -1,107 +1,180 @@
 @use "../all" as *;
 
 section.sectionComponent {
-  max-width: 95vw;
+  max-width: 75vw;
   height: 100%;
   padding-top: 10vh;
-    .pricesCards {
-      padding: 2vh 0;
-      margin: 0 auto;
+
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50vh;
+
+    .infoCol {
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      .pricesGroupOuter {
+      width: 60%;
+      height: 100%;
+      background-color: rgba($color: #aaaaaa, $alpha: 0.5);
+
+      // background: rgba(155, 155, 155, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(134, 134, 134, 0.082);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+
+      padding: 2%;
+
+      -webkit-clip-path: polygon(0% 0%, 0% 100%, 85% 100%, 100% 0%);
+      clip-path: polygon(0% 0%, 0% 100%, 85% 100%, 100% 0%);
+
+      h1 {
+        font-weight: 600;
+        font-size: 1.5em;
+      }
+
+      p {
+        &.sub {
+          font-weight: 800;
+          font-size: 1.5em;
+          color: #1d4283;
+        }
+
+        &.para {
+          font-weight: 400;
+          width: 85%;
+        }
+
+        &.paraS {
+          font-weight: 600;
+        }
+      }
+    }
+    .imgSec {
+      display: flex;
+      width: 40%;
+      margin-left: -7%;
+
+      .img {
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        overflow: hidden;
+        -webkit-clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0%);
+        clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0%);
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -25px;
+          width: 100%;
+          height: 100%;
+          background: #1d4283;
+          z-index: 3;
+          -webkit-clip-path: polygon(20% 0%, 0% 100%, 80% 100%, 100% 0%);
+          clip-path: polygon(20% 0%, 0% 100%, 80% 100%, 100% 0%);
+          transform: translateX(-65.5%);
+        }
+        .imgClip {
+          height: 100%;
+          width: 90%;
+          object-fit: cover;
+          object-position: center;
+          -webkit-clip-path: polygon(22.5% 0%, 0% 100%, 100% 100%, 100% 0%);
+          clip-path: polygon(22.5% 0%, 0% 100%, 100% 100%, 100% 0%);
+
+          // funky little guy that i liked.... i'll keep him here just in case
+          // padding-left: 5px; /* Add padding to the left */
+          // border-left: #1d4283 25px solid;
+
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .pricesCards {
+    padding: 2vh 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .pricesGroupOuter {
+      display: flex;
+      flex-direction: row;
+      align-items: top;
+      justify-content: center;
+      gap: 2vw;
+
+      .pricesGroupInner {
+        box-shadow: 4px 4px rgb(31, 38, 135);
+        backdrop-filter: blur(10.5px);
+        -webkit-backdrop-filter: blur(15.5px);
+
+        border-radius: 10px;
+        width: 90%;
+        background: #b8d2ff;
         display: flex;
         flex-direction: row;
         align-items: top;
         justify-content: center;
-        width : 90%;
-        gap : 3vw;
-        
-        .pricesGroupInner {
-          box-shadow: 4px 4px rgb(31, 38, 135);
-          backdrop-filter: blur( 10.5px );
-          -webkit-backdrop-filter: blur( 15.5px );
-          
-          border-radius: 10px;
-          // border: 3px solid  #1F2C42;
-          width: 90%;
-          background: #B8D2FF;
-          display: flex;
-          flex-direction: row;
-          align-items: top;
-          justify-content: center;
-          width: 30vw;
-          border-radius: 8px;
-          transition: all 200ms ease-in-out;
-        }
-        .pricesGroupInner:hover {
-          box-shadow: 8px 8px rgb(31, 38, 135);
-          backdrop-filter: blur( 10.5px );
-          -webkit-backdrop-filter: blur( 15.5px );
-          transform: translateY(-1.5%) translateX(-1.5%);
-          transition: all 200ms ease-in-out;
-          
-        }
-        .pricesGroupItems {
-          display: flex;
-          flex-direction: column;
-          align-items: left;
-          justify-content: top;
 
-          padding: 2vw;
-          width: 25vw;
-          .priceTitle{
-            font-size: 1.2em;
-            font-weight: 700;
-            // color: #f5c39f;
-            color: #1F2C42
+        border-radius: 8px;
+        transition: all 200ms ease-in-out;
+      }
+      .pricesGroupInner:hover {
+        box-shadow: 8px 8px rgb(31, 38, 135);
+        backdrop-filter: blur(10.5px);
+        -webkit-backdrop-filter: blur(15.5px);
+        transform: translateY(-1.5%) translateX(-1.5%);
+        transition: all 200ms ease-in-out;
+      }
+      .pricesGroupItems {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: top;
+
+        padding: 2vw;
+        width: 25vw;
+        .priceTitle {
+          font-size: 1.2em;
+          font-weight: 700;
+          // color: #f5c39f;
+          color: #1f2c42;
+        }
+        .priceText {
+          .priceNumber {
+            color: #d2691e;
           }
-          .priceText {
-            .priceNumber {
-              color: #d2691e;
-            }
-            color: #1F2C42;
-            font-size: .8em;
-          }
+          color: #1f2c42;
+          font-size: 0.8em;
         }
       }
-  }  
-}
-.blockDiv {
-  margin-left: 2.5vw;
-  width: 2.5vw;
-  background-color: #B8D2FF;
-  // border: solid rgb(31, 38, 135);
-  transform: skewX(-12.5deg) translateX(2vw);
-}
-.imageContainer {
-  width: 50vw;
-  .imageClip {
-    height: 100%;
-    width:  100%;
-    object-fit: cover;
-    object-position: center;
-    -webkit-clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0%);
-    clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0%);
+    }
   }
 }
 
-@media (max-width: 1200px) {
-  section.sectionComponent {
-    font-size: 26px;
-  }
-}
+// @media (max-width: 1200px) {
+//   section.sectionComponent {
+//     font-size: 26px;
+//   }
+// }
 
-@media (max-width: 768px) {
-  section.sectionComponent {
-    font-size: 18px;
-  }
-}
+// @media (max-width: 768px) {
+//   section.sectionComponent {
+//     font-size: 18px;
+//   }
+// }
 
-@media (max-width: 480px) {
-  section.sectionComponent {
-    font-size: 12px;
-  }
-}
+// @media (max-width: 480px) {
+//   section.sectionComponent {
+//     font-size: 12px;
+//   }
+// }

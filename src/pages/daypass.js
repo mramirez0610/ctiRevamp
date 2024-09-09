@@ -5,8 +5,6 @@ import path from "path";
 import { promises as fs } from "fs";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import Image from "next/image";
-import photo1 from "../../public/img/photo1.webp";
 
 export default function DayPass({ attributes, mdxSource }) {
   const [stateAttributes, setStateAttributes] = useState(attributes);
@@ -20,56 +18,38 @@ export default function DayPass({ attributes, mdxSource }) {
     <>
       <section className={styles.sectionComponent}>
         <article>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "left",
-                width: "50vw",
-                height: "fit-content",
-                margin: "2.5vw",
-              }}
-            >
-              <h1 style={{ fontWeight: "600", fontSize: "1em" }}>
-                Come Climb with us for a Day!
-              </h1>
-              <p
-                style={{
-                  fontWeight: "800",
-                  color: "#1d4283",
-                  fontSize: "1em",
-                }}
-              >
+          <div className={styles.banner}>
+            <div className={styles.infoCol}>
+              <h1>Get Unlimited Access to all our Services</h1>
+              <p className={styles.sub}>
                 Climb Time Indy
                 <br />
-                DayPass
+                Memberships
               </p>
-              <p style={{ fontWeight: "400", fontSize: ".6em" }}>
-                Climb all day and try your hands at top ropes and Bouldering!
+              <p className={styles.para}>
+                Climb as many times as you want for less than the cost of 3 day
+                passes. The best value in the Indianapolis climbing community.
               </p>
-              <p style={{ fontWeight: "600", fontSize: ".6em" }}>
-                Organize a group and climb with your friends.
+              <p className={styles.paraS}>
+                Sign Up for a Climb Time Indy Membership and enjoy the benefits.
                 <br />
-                Learn more about our daypasses below.
+                Learn more about our memberships below.
               </p>
             </div>
-            <div className={styles.blockDiv}></div>
-            <div className={styles.imageContainer}>
-              <img
-                src="/img/photo3.webp"
-                alt="photo"
-                width="100%"
-                height="fit-content"
-                className={styles.imageClip}
-              />
+
+            <div className={styles.imgSec}>
+              <div className={styles.img}>
+                <img
+                  src="/img/photo3.webp"
+                  alt="photo"
+                  width="100%"
+                  height="fit-content"
+                  className={styles.imgClip}
+                />
+              </div>
             </div>
           </div>
+
           <div className={styles.pricesCards}>
             <div className={styles.pricesGroupOuter}>
               <div className={styles.pricesGroupInner}>
