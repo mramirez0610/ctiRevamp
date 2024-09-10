@@ -50,29 +50,28 @@ export default function Hero() {
             className={styles.img}
           />
 
-          <div className={styles.greet}>
-            <div className={styles.intro}>
-              <h2>Welcome to Climb Time Indy</h2>
-              <p>
-                Climb Time Indy is the best climbing gym in Indianapolis. We
-                offer a variety of climbing walls, fitness classes, and gear for
-                sale. Fun for all ages and abilities!
-              </p>
-            </div>
-
-            <div className={styles.waiver}>
-              <h3>First time?</h3>
-              <button className={styles.button}>
-                <a href="/about">Sign Our Waiver</a>
-              </button>
-            </div>
-          </div>
-
           <div className={styles.scroll}>
             <span>Scroll For Rates</span>
           </div>
         </div>
       ))}
+      <div className={styles.greet}>
+        <div className={styles.intro}>
+          <h2>Welcome to Climb Time Indy</h2>
+          <p>
+            Climb Time Indy is the best climbing gym in Indianapolis. We offer a
+            variety of climbing walls, fitness classes, and gear for sale. Fun
+            for all ages and abilities!
+          </p>
+        </div>
+
+        <div className={styles.waiver}>
+          <h3>First time?</h3>
+          <button className={styles.button}>
+            <a href="/about">Sign Our Waiver</a>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

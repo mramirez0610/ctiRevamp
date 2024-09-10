@@ -28,6 +28,9 @@
 
     &.scrolled {
       scale: 1;
+      .wNav li a {
+        color: $secondary-color; /* Ensure the color is applied */
+      }
     }
 
     .wNav {
@@ -143,5 +146,33 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    .webNav {
+      .wNav {
+        li {
+          a {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .navbar {
+    .webNav {
+      .wNav {
+        li {
+          a {
+            color: #000;
+          }
+        }
+      }
+    }
   }
 }
