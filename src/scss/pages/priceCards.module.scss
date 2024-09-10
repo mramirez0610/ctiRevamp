@@ -48,6 +48,7 @@ section.sectionComponent {
 
         &.paraS {
           font-weight: 600;
+          width: 85%;
         }
       }
     }
@@ -110,7 +111,6 @@ section.sectionComponent {
       flex-direction: row;
       align-items: top;
       justify-content: center;
-      gap: 2vw;
 
       .pricesGroupInner {
         box-shadow: 4px 4px rgb(31, 38, 135);
