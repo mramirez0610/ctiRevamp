@@ -17,14 +17,12 @@ section.sectionComponent {
       justify-content: center;
       width: 60%;
       height: 100%;
-      background-color: rgba($color: #aaaaaa, $alpha: 0.5);
+      padding: 2%;
 
-      // background: rgba(155, 155, 155, 0.1);
+      background-color: rgba($color: #aaaaaa, $alpha: 0.5);
       box-shadow: 0 8px 32px 0 rgba(134, 134, 134, 0.082);
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
-
-      padding: 2%;
 
       -webkit-clip-path: polygon(0% 0%, 0% 100%, 85% 100%, 100% 0%);
       clip-path: polygon(0% 0%, 0% 100%, 85% 100%, 100% 0%);
@@ -143,6 +141,7 @@ section.sectionComponent {
 
         padding: 2vw;
         width: 25vw;
+
         .priceTitle {
           font-size: 1.2em;
           font-weight: 700;
