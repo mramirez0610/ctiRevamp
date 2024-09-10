@@ -6,6 +6,9 @@ import photo0 from "../../public/img/photo0.webp";
 import photo1 from "../../public/img/photo1.webp";
 import photo2 from "../../public/img/photo2.webp";
 import photo3 from "../../public/img/photo3.webp";
+import Gunks from "../../public/img/GunksClimber.webp";
+import EthanBright from "../../public/img/EthanBright.webp";
+import EthanClimber from "../../public/img/EthanClimber.webp";
 
 export default function NavigationCards() {
   return (
@@ -28,7 +31,7 @@ export default function NavigationCards() {
             <CardComponent
               title="Membership"
               description="view our rates for a membership for climbing"
-              image={photo2}
+              image={EthanClimber}
             />
           </Link>
         </div>
@@ -38,7 +41,7 @@ export default function NavigationCards() {
           <CardComponent
             title="Punch Pass"
             description="view our options for a punch pass for multi-day climbing"
-            image={photo3}
+            image={Gunks}
           />
         </Link>
       </div>
@@ -59,7 +62,7 @@ export default function NavigationCards() {
             <CardComponent
               title="Group Events and Parties"
               description="Schedule group events and parties for a group day out"
-              image={photo2}
+              image={EthanBright}
             />
           </Link>
         </div>
