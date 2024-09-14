@@ -1,7 +1,6 @@
 import styles from "@/scss/components/navigationCards.module.scss";
 import CardComponent from "@/components/cardComponent";
 import Link from "next/link";
-import ImageComponent from "./imageComponent";
 import photo0 from "../../public/img/photo0.webp";
 import photo1 from "../../public/img/photo1.webp";
 import photo2 from "../../public/img/photo2.webp";
@@ -20,7 +19,6 @@ export default function NavigationCards() {
               title="Daypass"
               description="View our rates and gear rentals"
               image={photo1}
-              // link="/daypass"
             />
           </Link>
         </div>

@@ -15,29 +15,47 @@
     object-fit: cover;
   }
   &:hover {
-    scale: 1.02;
+    scale: 1.03;
+
+    .cardText {
+      .cardTitle {
+        transition: margin-top 350ms ease-in-out;
+        margin-top: -10px;
+      }
+      .cardDesc {
+        opacity: 1;
+        transition: opacity 300ms ease-in-out;
+      }
+    }
+  }
+
+  .cardText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 24vw;
+    height: auto;
+    padding: 1vw;
+    pointer-events: none;
+    text-align: center;
+
+    .cardTitle {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $secondary-color;
+      transition: margin-top 150ms ease-in-out;
+    }
+    .cardDesc {
+      font-size: 1rem;
+      color: $secondary-color;
+      opacity: 0;
+      transition: opacity 300ms ease-in-out;
+    }
   }
 }
 
-.cardTextContainer {
-  display: flex;
-  flex: wrap;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 24vw;
-  height: auto;
-  padding: 1vw;
-  transition: none;
-  transform: none;
-}
-.cardTitle {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-}
-.cardDescription {
-  font-size: 1rem;
-  color: white;
+.transition {
+  transition: transform 0.3s ease-in-out;
 }

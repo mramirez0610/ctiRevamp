@@ -21,6 +21,7 @@ const Logo = () => {
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileNav, setMobileNav] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,6 +40,22 @@ export default function Navbar() {
 
   const handleMobileNav = () => {
     setMobileNav(!mobileNav);
+  };
+
+  const productsDropdown = () => {
+    return (
+      <div className={styles.productsDropdown}>
+        <Link href="/">Daypass</Link>
+        <Link href="/">Memberships</Link>
+        <Link href="/">Punch Pass</Link>
+        <Link href="/">Fun</Link>
+      </div>
+    );
+  };
+
+  const handleProducts = (e) => {
+    setShowDropdown(!showDropdown);
+    e.preventDefault();
   };
 
   return (
@@ -85,8 +102,9 @@ export default function Navbar() {
             <li>
               <Link href="/parties">Parties</Link>
             </li>
-            <li>
-              <Link href="/products">Products</Link>
+            <li onClick={handleProducts}>
+              <Link href="">Products</Link>
+              {showDropdown && productsDropdown()}
             </li>
             <li>
               <Link href="https://waiver.smartwaiver.com/w/5dc496b7cf021/web/">

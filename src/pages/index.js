@@ -15,15 +15,12 @@ export default function Home({ attributes }) {
     setStateAttributes(attributes);
   }, [attributes]);
 
-  const { title, day, bundle } = stateAttributes;
-
   return (
     <>
       <Head>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
       <Hero />
-      {/* <Prices {...stateAttributes} /> */}
       <NavigationCards />
     </>
   );

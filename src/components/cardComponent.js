@@ -9,6 +9,7 @@ export default function CardComponent({ title, description, image }) {
   const handleMouseEnter = (e) => {
     boundingRef.current = e.target.getBoundingClientRect();
     e.target.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    e.target.classList.remove(styles.transition);
   };
 
   const handleMouseMove = (e) => {
@@ -29,27 +30,29 @@ export default function CardComponent({ title, description, image }) {
   const handleMouseLeave = (e) => {
     boundingRef.current = null;
     e.target.style.transform = `rotateX(0deg) rotateY(0deg)`;
-    e.target.classList.remove(styles.noTransition); // Enable transition on mouse leave
+    e.target.classList.add(styles.transition);
   };
 
   return (
-    <div
-      className={styles.card}
-      onMouseEnter={handleMouseEnter}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
-      <Image
-        src={image}
-        alt={title}
-        width={100}
-        height={100}
-        layout="responsive"
-      />
-      <div className={styles.cardTextContainer}>
-        <div className={styles.cardTitle}>{title}</div>
-        <div className={styles.cardDescription}>{description}</div>
+    <>
+      <div
+        className={styles.card}
+        onMouseEnter={handleMouseEnter}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      >
+        <Image
+          src={image}
+          alt={title}
+          width={100}
+          height={100}
+          layout="responsive"
+        />
+        <div className={styles.cardText}>
+          <div className={styles.cardTitle}>{title}</div>
+          <div className={styles.cardDesc}>{description}</div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

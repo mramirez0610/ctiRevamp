@@ -5,22 +5,24 @@
   grid-template-columns: 33vw 33vw 33vw;
   grid-template-rows: auto auto;
   margin-top: 0.5%;
-}
-.gridItem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  height: auto;
-  padding: 1%;
-}
-.cardContainer {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  perspective: 800px;
+
+  .gridItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 1%;
+
+    .cardContainer {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      perspective: 800px;
+    }
+  }
 }
 
 @media (max-width: 768px) {
