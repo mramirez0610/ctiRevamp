@@ -1,6 +1,6 @@
 import Hero from "@/components/hero";
-import Prices from "@/components/prices";
 import Head from "next/head";
+import Script from "next/script";
 
 import { promises as fs } from "fs";
 import { useEffect, useState } from "react";
@@ -18,7 +18,10 @@ export default function Home({ attributes }) {
   return (
     <>
       <Head>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <Script
+          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+          strategy="lazyOnload"
+        />
       </Head>
       <Hero />
       <NavigationCards />
