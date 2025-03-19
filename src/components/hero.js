@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import styles from "@/scss/components/hero.module.scss";
+import { ArrowDown, ArrowCircleDown } from "@phosphor-icons/react";
 
 import photo1 from "../assets/photo0.png";
 import photo2 from "../assets/photo1.png";
@@ -52,21 +53,23 @@ export default function Hero() {
 
           <div className={styles.scroll}>
             <span>Scroll For Rates</span>
+            <ArrowCircleDown size={32} />
           </div>
         </div>
       ))}
       <div className={styles.greet}>
         <div className={styles.intro}>
-          <h2>Welcome to Climb Time Indy</h2>
-          <p>
+          <h1>Climb Time Indy</h1>
+          <h2>Indiana's first climbing gym.</h2>
+          {/* <p>
             Climb Time Indy is the best climbing gym in Indianapolis. We offer a
             variety of climbing walls, fitness classes, and gear for sale. Fun
             for all ages and abilities!
-          </p>
+          </p> */}
         </div>
 
         <div className={styles.waiver}>
-          <h3>First time?</h3>
+          <h2>Get started below.</h2>
           <button className={styles.button}>
             <a href="/about">Sign Our Waiver</a>
           </button>

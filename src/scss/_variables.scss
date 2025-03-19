@@ -1,2 +1,7 @@
 $primary-color: #1d4283;
 $secondary-color: #f7f7f7;
+
+@mixin text-shadow {
+  font-style: italic;
+  text-shadow: 0 0 14px rgba(0, 0, 0, 0.75);
+}
