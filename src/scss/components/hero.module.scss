@@ -23,9 +23,9 @@
     .intro {
       h1 {
         font-size: 4.5rem;
-        @include text-shadow;
       }
 
+      h1,
       h2 {
         @include text-shadow;
       }
@@ -61,7 +61,7 @@
   .scroll {
     position: absolute;
     text-align: center;
-    bottom: 5%;
+    bottom: 10%;
     width: 100%;
     color: $secondary-color;
     gap: 1vh;
@@ -75,8 +75,14 @@
 @media (max-width: 768px) {
   .hero {
     .greet {
-      width: 90vw;
-      // font-size: 1.2rem;
+      width: 85vw;
+
+      .intro {
+        h1 {
+          width: 50%;
+        }
+        // font-size: 1.2rem;
+      }
 
       .waiver {
         .button {

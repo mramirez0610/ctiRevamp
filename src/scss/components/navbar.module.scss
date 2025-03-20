@@ -85,7 +85,13 @@
 
 .active {
   // styles for the active class
-  display: block !important ;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.closed {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .mNavbar {
@@ -117,13 +123,12 @@
 }
 
 .mobileNav {
-  display: none;
   position: fixed;
   background-color: $primary-color;
   transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-  height: 90vh;
-  z-index: 102;
-  margin-top: 10vh;
+  transition: opacity 300ms ease;
+  height: 100vh;
+  z-index: 99;
 
   .mNav {
     display: flex;

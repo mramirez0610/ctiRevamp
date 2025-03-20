@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "@/scss/components/navbar.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import { List, X } from "@phosphor-icons/react";
 import logo from "../assets/cti_logo.png";
 
 const Logo = () => {
@@ -62,13 +63,17 @@ export default function Navbar() {
     <>
       <div className={`${styles.mNavbar} ${scrolled ? styles.scrolled : ""}`}>
         <Logo />
-        <div className={styles.hamburger} onClick={handleMobileNav}>
-          <div className={styles.line}></div>
-          <div className={styles.line}></div>
-          <div className={styles.line}></div>
-        </div>
+        {!mobileNav ? (
+          <List size={32} onClick={handleMobileNav} />
+        ) : (
+          <X size={32} onClick={handleMobileNav} />
+        )}
       </div>
-      <div className={`${styles.mobileNav} ${mobileNav ? styles.active : ""}`}>
+      <div
+        className={`${styles.mobileNav} ${
+          mobileNav ? styles.active : styles.closed
+        }`}
+      >
         <ul className={styles.mNav}>
           <li>
             <Link href="/">Home</Link>
