@@ -34,9 +34,9 @@ export default function CardComponent({ title, description, image }) {
   };
 
   const handleTouchStart = (e) => {
-    boundingRef.current = e.currentTarget.getBoundingClientRect();
-    e.currentTarget.style.transform = `rotateX(0deg) rotateY(0deg)`;
-    e.currentTarget.classList.remove(styles.transition);
+    boundingRef.current = e.target.getBoundingClientRect();
+    e.target.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    e.target.classList.remove(styles.transition);
   };
 
   const handleTouchMove = (e) => {
@@ -52,13 +52,13 @@ export default function CardComponent({ title, description, image }) {
     const xRotation = (0.5 - xPercent) * 10;
     const yRotation = (0.5 - yPercent) * 10;
 
-    e.currentTarget.style.transform = `perspective(800px) rotateX(${-yRotation}deg) rotateY(${xRotation}deg)`;
+    e.target.style.transform = `perspective(800px) rotateX(${-yRotation}deg) rotateY(${xRotation}deg)`;
   };
 
   const handleTouchEnd = (e) => {
     boundingRef.current = null;
-    e.currentTarget.style.transform = `rotateX(0deg) rotateY(0deg)`;
-    e.currentTarget.classList.add(styles.transition);
+    e.target.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    e.target.classList.add(styles.transition);
   };
 
   return (
