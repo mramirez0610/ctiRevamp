@@ -65,6 +65,7 @@ export default function Hero() {
             height={0}
             width={0}
             className={styles.img}
+            priority={true}
           />
 
           <div

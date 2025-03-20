@@ -18,7 +18,7 @@
     "@vis.gl/react-google-maps": "^1.1.0",
     "deck.gl": "^9.0.23",
     "gray-matter": "^4.0.3",
-    "next": "^14.2.5",
+    "next": "^15.2.3",
     "next-mdx-remote": "^5.0.0",
     "react": "^18",
     "react-dom": "^18",

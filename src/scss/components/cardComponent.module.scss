@@ -15,7 +15,9 @@
     width: 100%;
     height: 100% !important;
     object-fit: cover;
+    filter: brightness(70%);
   }
+
   &:hover {
     scale: 1.03;
 
@@ -51,6 +53,7 @@
     }
     .cardDesc {
       font-size: 1rem;
+      font-weight: 500;
       color: $secondary-color;
       opacity: 0;
       transition: opacity 300ms ease-in-out;
