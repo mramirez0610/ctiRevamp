@@ -36,7 +36,7 @@ export default function CardComponent({ title, description, image }) {
   const handleTouchStart = (e) => {
     boundingRef.current = e.currentTarget.getBoundingClientRect();
     e.currentTarget.style.transform = `rotateX(0deg) rotateY(0deg)`;
-    e.currentTarget.classList.remove(transition);
+    e.currentTarget.classList.remove(styles.transition);
   };
 
   const handleTouchMove = (e) => {
@@ -58,7 +58,7 @@ export default function CardComponent({ title, description, image }) {
   const handleTouchEnd = (e) => {
     boundingRef.current = null;
     e.currentTarget.style.transform = `rotateX(0deg) rotateY(0deg)`;
-    e.currentTarget.classList.add(transition);
+    e.currentTarget.classList.add(styles.transition);
   };
 
   return (
