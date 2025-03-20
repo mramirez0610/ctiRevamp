@@ -69,6 +69,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: bottom 600ms ease;
+
+    &.scrolled {
+      bottom: 5%;
+    }
   }
 }
 

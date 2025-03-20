@@ -19,6 +19,7 @@ const interval = 5000;
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -27,6 +28,21 @@ export default function Hero() {
 
     return () => clearInterval(timer);
   }, [images.length, interval]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className={styles.hero}>
@@ -51,7 +67,9 @@ export default function Hero() {
             className={styles.img}
           />
 
-          <div className={styles.scroll}>
+          <div
+            className={`${styles.scroll} ${scrolled ? styles.scrolled : ""}`}
+          >
             <span>Scroll For Rates</span>
             <ArrowCircleDown size={32} />
           </div>
