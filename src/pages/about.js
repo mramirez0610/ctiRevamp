@@ -1,4 +1,4 @@
-import styles from "@/scss/pages/about.module.scss";
+import styles from "@scss/pages/about.module.scss";
 import { FacebookLogo, InstagramLogo } from "@phosphor-icons/react";
 
 import Image from "next/image";
@@ -10,7 +10,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import SocialMediaButtons from "@/components/socialMediaButtons";
+import SocialMediaButtons from "@components/socialMediaButtons";
 // import ImageComponent from "@/components/imageComponent";
 import {
   PictureLeftTextRight,

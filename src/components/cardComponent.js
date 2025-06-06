@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/scss/components/cardComponent.module.scss";
+import styles from "@scss/components/cardComponent.module.scss";
 import { useRef } from "react";
 
 export default function CardComponent({ title, description, image }) {

@@ -1,5 +1,5 @@
 import { FacebookLogo, InstagramLogo } from "@phosphor-icons/react";
-import styles from "@/scss/components/socialMediaButtons.module.scss";
+import styles from "@scss/components/socialMediaButtons.module.scss";
 export default function SocialMediaButtons() {
   return (
     <div className={styles.buttonsContainer}>

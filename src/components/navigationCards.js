@@ -1,5 +1,5 @@
-import styles from "@/scss/components/navigationCards.module.scss";
-import CardComponent from "@/components/cardComponent";
+import styles from "@scss/components/navigationCards.module.scss";
+import CardComponent from "@components/cardComponent";
 import Link from "next/link";
 import photo0 from "../../public/img/photo0.webp";
 import photo1 from "../../public/img/photo1.webp";

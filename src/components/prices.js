@@ -1,4 +1,4 @@
-import styles from "@/scss/components/prices.module.scss";
+import styles from "@scss/components/prices.module.scss";
 
 export default function Prices(props) {
   const day = props.day;

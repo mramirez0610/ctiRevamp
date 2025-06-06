@@ -1,5 +1,5 @@
-import styles from "@/scss/components/pictureText.module.scss";
-import ImageComponent from "@/components/imageComponent";
+import styles from "@scss/components/pictureText.module.scss";
+import ImageComponent from "@components/imageComponent";
 import { useEffect, useState } from "react";
 
 export function PictureLeftTextRight({ picture, text, title }) {

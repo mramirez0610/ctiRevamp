@@ -45,11 +45,14 @@ export default function Navbar() {
 
   const productsDropdown = () => {
     return (
-      <div className={styles.productsDropdown}>
-        <Link href="/">Daypass</Link>
-        <Link href="/">Memberships</Link>
-        <Link href="/">Punch Pass</Link>
-        <Link href="/">Fun</Link>
+      <div
+        className={`${styles.productsDropdown} ${
+          showDropdown ? styles.active : styles.closed
+        }`}
+      >
+        <Link href="/daypass">Daypass</Link>
+        <Link href="/memberships">Memberships</Link>
+        <Link href="/punch-pass">Punch Pass</Link>
       </div>
     );
   };
@@ -108,7 +111,7 @@ export default function Navbar() {
               <Link href="/parties">Parties</Link>
             </li>
             <li onClick={handleProducts}>
-              <Link href="">Products</Link>
+              <a href="">Products</a>
               {showDropdown && productsDropdown()}
             </li>
             <li>

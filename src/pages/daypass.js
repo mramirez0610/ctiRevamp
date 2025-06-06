@@ -1,4 +1,4 @@
-import styles from "@/scss/pages/priceCards.module.scss";
+import styles from "@scss/pages/priceCards.module.scss";
 import { useEffect, useState } from "react";
 import matter from "gray-matter";
 import path from "path";
