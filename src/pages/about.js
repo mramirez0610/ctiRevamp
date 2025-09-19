@@ -1,26 +1,18 @@
 import styles from "@scss/pages/about.module.scss";
-import { FacebookLogo, InstagramLogo } from "@phosphor-icons/react";
-
-import Image from "next/image";
-import photo1 from "../assets/photo0.png";
-
-import { useEffect, useState } from "react";
 import matter from "gray-matter";
 import { promises as fs } from "fs";
 import path from "path";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import SocialMediaButtons from "@components/socialMediaButtons";
-// import ImageComponent from "@/components/imageComponent";
+
 import {
   PictureLeftTextRight,
   PictureRightTextLeft,
-} from "@/components/pictureText";
+} from "@components/pictureText";
 
 const components = {
   PictureLeftTextRight: (props) => <PictureLeftTextRight {...props} />,
   PictureRightTextLeft: (props) => <PictureRightTextLeft {...props} />,
-  SocialMediaButtons,
   div: (props) => <div className={styles.container}>{props.children}</div>,
 };
 

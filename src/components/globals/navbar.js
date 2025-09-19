@@ -3,7 +3,7 @@ import styles from "@/scss/components/navbar.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { List, X } from "@phosphor-icons/react";
-import logo from "../assets/cti_logo.png";
+import logo from "../../assets/cti_logo.png";
 
 const Logo = () => {
   return (
@@ -86,9 +86,6 @@ export default function Navbar() {
           </li>
           <li>
             <Link href="/parties">Parties</Link>
-          </li>
-          <li>
-            <Link href="/products">Products</Link>
           </li>
           <li>
             <Link href="https://waiver.smartwaiver.com/w/5dc496b7cf021/web/">

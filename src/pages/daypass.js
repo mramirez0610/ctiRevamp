@@ -3,122 +3,40 @@ import { useEffect, useState } from "react";
 import matter from "gray-matter";
 import path from "path";
 import { promises as fs } from "fs";
-import { MDXRemote } from "next-mdx-remote";
+import PriceCards from "@components/product/priceCards";
 import { serialize } from "next-mdx-remote/serialize";
+import Banner from "@components/product/banner";
 
-export default function DayPass({ attributes, mdxSource }) {
+export default function DayPass({ attributes }) {
   const [stateAttributes, setStateAttributes] = useState(attributes);
 
   useEffect(() => {
     setStateAttributes(attributes);
   }, [attributes]);
 
-  const { title, gear, noGear, Individual } = stateAttributes;
+  const pricingCategories = [
+    { title: "Use Our Gear!", data: stateAttributes.gear },
+    { title: "Have Your Own Gear?", data: stateAttributes.noGear },
+    { title: "Forgot Something?", data: stateAttributes.Individual },
+  ];
+
+  const bannerCategory = {
+    title: "Climb Time Indy",
+    headline: "Day Passes",
+    desc: "Climb as many times as you want for less than the cost of 3 day passes. The best value in the Indianapolis climbing community.",
+    callToAction:
+      "Sign Up for a Climb Time Indy Day Pass and enjoy the benefits.",
+    src: "/img/testingHorz.png",
+    // src: "/img/testing.png",
+    alt: "Day Pass Banner",
+  };
+
   return (
     <>
       <section className={styles.sectionComponent}>
         <article>
-          <div className={styles.banner}>
-            <div className={styles.infoCol}>
-              <h1>Get Unlimited Access to all our Services</h1>
-              <p className={styles.sub}>
-                Climb Time Indy
-                <br />
-                Memberships
-              </p>
-              <p className={styles.para}>
-                Climb as many times as you want for less than the cost of 3 day
-                passes. The best value in the Indianapolis climbing community.
-              </p>
-              <p className={styles.paraS}>
-                Sign Up for a Climb Time Indy Membership and enjoy the benefits.
-                <br />
-                Learn more about our memberships below.
-              </p>
-            </div>
-
-            <div className={styles.imgSec}>
-              <div className={styles.img}>
-                <img
-                  src="/img/photo3.webp"
-                  alt="photo"
-                  width="100%"
-                  height="fit-content"
-                  className={styles.imgClip}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.pricesCards}>
-            <div className={styles.pricesGroupOuter}>
-              <div className={styles.pricesGroupInner}>
-                <div className={styles.pricesGroupItems}>
-                  <ul>
-                    <h1 className={styles.priceTitle}>Gear</h1>
-                    <div className={styles.hrLine}></div>
-                    {gear.map((example, k) => (
-                      <div key={k}>
-                        <p className={styles.priceText}>{example.name}</p>
-                        <p className={styles.priceText}>
-                          Price -{" "}
-                          <span className={styles.priceNumber}>
-                            ${example.price}
-                          </span>
-                        </p>
-                        <p className={styles.priceText}>
-                          {example.description}
-                        </p>
-                      </div>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className={styles.pricesGroupInner}>
-                <div className={styles.pricesGroupItems}>
-                  <ul>
-                    <h1 className={styles.priceTitle}>No Gear</h1>
-                    {noGear.map((example, k) => (
-                      <div key={k}>
-                        <p className={styles.priceText}>{example.name}</p>
-                        <p className={styles.priceText}>
-                          Price -{" "}
-                          <span className={styles.priceNumber}>
-                            ${example.price}
-                          </span>
-                        </p>
-                        <p className={styles.priceText}>
-                          {example.description}
-                        </p>
-                      </div>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className={styles.pricesGroupInner}>
-                <div className={styles.pricesGroupItems}>
-                  <ul>
-                    <h1 className={styles.priceTitle}>Individual</h1>
-                    {Individual.map((example, k) => (
-                      <div key={k}>
-                        <p className={styles.priceText}>{example.name}</p>
-                        <p className={styles.priceText}>
-                          Price -{" "}
-                          <span className={styles.priceNumber}>
-                            ${example.price}
-                          </span>
-                        </p>
-                        <p className={styles.priceText}>
-                          {example.description}
-                        </p>
-                      </div>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <MDXRemote {...mdxSource} />
+          <Banner category={bannerCategory} />
+          <PriceCards pricingCategories={pricingCategories} />
         </article>
       </section>
     </>

@@ -3,86 +3,38 @@ import { useEffect, useState } from "react";
 import matter from "gray-matter";
 import path from "path";
 import { promises as fs } from "fs";
-import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
+import PriceCards from "@components/product/priceCards";
+import Banner from "@components/product/banner";
 
-export default function Memberships({ attributes, mdxSource }) {
+export default function Memberships({ attributes }) {
   const [stateAttributes, setStateAttributes] = useState(attributes);
 
   useEffect(() => {
     setStateAttributes(attributes);
   }, [attributes]);
 
-  const { title, memberships } = stateAttributes;
+  const pricingCategories = [
+    { title: "Climb By Yourself!", data: stateAttributes.individual },
+    { title: "Bring your family!", data: stateAttributes.family },
+  ];
+
+  const bannerCategory = {
+    title: "Climb For A While",
+    headline: "CTI Memberships",
+    desc: "Climb as many times as you want for less than the cost of 3 day passes. The best value in the Indianapolis climbing community.",
+    callToAction:
+      "Sign Up for a Climb Time Indy Membership and enjoy the benefits.",
+    src: "/img/testingHorz.png",
+    alt: "Memberships Banner",
+  };
+
   return (
     <>
       <section className={styles.sectionComponent}>
         <article>
-          <div className={styles.banner}>
-            <div className={styles.infoCol}>
-              <h1>Get Unlimited Access to all our Services</h1>
-              <p className={styles.sub}>
-                Climb Time Indy
-                <br />
-                Memberships
-              </p>
-              <p className={styles.para}>
-                Climb as many times as you want for less than the cost of 3 day
-                passes. The best value in the Indianapolis climbing community.
-              </p>
-              <p className={styles.paraS}>
-                Sign Up for a Climb Time Indy Membership and enjoy the benefits.
-                <br />
-                Learn more about our memberships below.
-              </p>
-            </div>
-
-            <div className={styles.imgSec}>
-              <div className={styles.img}>
-                <img
-                  src="/img/photo3.webp"
-                  alt="photo"
-                  width="100%"
-                  height="fit-content"
-                  className={styles.imgClip}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.pricesCards}>
-            <div className={styles.pricesGroupOuter}>
-              {memberships.map((type, k) => (
-                <div key={k} className={styles.pricesGroupInner}>
-                  <div className={styles.pricesGroupItems}>
-                    <ul>
-                      <h1 className={styles.priceTitle}>{type.title}</h1>
-                      {type.prices.map((example, k) => (
-                        <div key={k}>
-                          <p className={styles.priceText}>
-                            {example.name}
-                            <br />
-                            {example?.length}
-                          </p>
-                          <p className={styles.priceText}>{example?.desc}</p>
-                          <p className={styles.priceText}>
-                            Price -{" "}
-                            <span className={styles.priceNumber}>
-                              ${example.price}
-                            </span>
-                          </p>
-                          <p className={styles.priceText}>
-                            {example.description}
-                          </p>
-                        </div>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <MDXRemote {...mdxSource} />
+          <Banner category={bannerCategory} />
+          <PriceCards pricingCategories={pricingCategories} />
         </article>
       </section>
     </>

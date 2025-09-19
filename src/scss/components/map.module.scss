@@ -1,6 +1,5 @@
 @use "../all" as *;
 
-
 .mapContainer {
   height: 30vh;
   display: flex;
@@ -16,11 +15,11 @@
   p {
     font-size: 1vw;
   }
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  // display: flex;
+  // flex-wrap: wrap;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   bottom: 10px;
@@ -31,4 +30,3 @@
   width: 30%;
   z-index: 1;
 }
-

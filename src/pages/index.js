@@ -1,7 +1,7 @@
-import Hero from "@components/hero";
+import Hero from "@components/home/hero";
 import Head from "next/head";
 import Script from "next/script";
-import NavigationCards from "@components/navigationCards";
+import NavigationCards from "@components/home/navigationCards";
 
 export default function Home() {
   return (
