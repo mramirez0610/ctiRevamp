@@ -4,7 +4,7 @@ import MapDisplay from "@components/map";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <MapDisplay />
+      {/* <MapDisplay /> */}
       <p>&copy; 2024 Climb Time Indy</p>
       <p>8750 Corporation Dr, Indianapolis, IN 46256</p>
 

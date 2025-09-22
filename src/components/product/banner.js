@@ -1,34 +1,18 @@
 import styles from "@scss/components/banner.module.scss";
 
-export default function Banner({ category }) {
+export default function Banner({ banner }) {
   return (
     <div className={styles.banner}>
       <div className={styles.infoBackdrop}>
         <div className={styles.backdrop}></div>
         <div className={styles.infoCol}>
-          <h1>Get Unlimited Access to all our Services</h1>
-          <p className={styles.sub}>
-            {category.title}
-            <br />
-            {category.headline}
-          </p>
-          <p className={styles.para}>{category.desc}</p>
-          <p className={styles.paraS}>
-            {category.callToAction}
-            <br />
-            Learn more below.
-          </p>
-        </div>
-      </div>
+          <h2 className={styles.headline}>{banner.headline}</h2>
+          <h1 className={styles.title}>{banner.title}</h1>
+          <h3 className={styles.callToAction}>{banner.callToAction}</h3>
 
-      <div className={styles.imgSec}>
-        <img
-          src={category.src}
-          alt={category.alt || "banner image"}
-          width="100%"
-          height="fit-content"
-          className={styles.img}
-        />
+          <p className={styles.desc}>{banner.desc}</p>
+          <p className={styles.paraS}>Learn more below.</p>
+        </div>
       </div>
     </div>
   );

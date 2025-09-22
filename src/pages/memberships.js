@@ -1,5 +1,6 @@
 import styles from "@scss/pages/priceCards.module.scss";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 import matter from "gray-matter";
 import path from "path";
 import { promises as fs } from "fs";
@@ -19,21 +20,41 @@ export default function Memberships({ attributes }) {
     { title: "Bring your family!", data: stateAttributes.family },
   ];
 
-  const bannerCategory = {
-    title: "Climb For A While",
-    headline: "CTI Memberships",
-    desc: "Climb as many times as you want for less than the cost of 3 day passes. The best value in the Indianapolis climbing community.",
-    callToAction:
-      "Sign Up for a Climb Time Indy Membership and enjoy the benefits.",
-    src: "/img/testingHorz.png",
-    alt: "Memberships Banner",
+  const bannerCategory = stateAttributes.banner;
+
+  const bannerItem = {
+    title: bannerCategory.title,
+    headline: bannerCategory.headline,
+    desc: bannerCategory.desc,
+    callToAction: bannerCategory.callToAction,
+    src: bannerCategory.image.desk || bannerCategory.image.mobile || "",
+    alt: bannerCategory.image.alt || "",
   };
 
   return (
     <>
+      {/* create reusable head comp */}
+      <Head>
+        <title>{attributes?.metaTitle || `${bannerItem.title} — CTI`}</title>
+        <meta
+          name="description"
+          content={attributes?.metaDescription || bannerItem.desc}
+        />
+        <link rel="canonical" href="https://your-domain.com/memberships" />
+        <meta
+          property="og:title"
+          content={attributes?.metaTitle || bannerItem.title}
+        />
+        <meta
+          property="og:description"
+          content={attributes?.metaDescription || bannerItem.desc}
+        />
+        <meta property="og:image" content={bannerItem.src} />
+      </Head>
+
       <section className={styles.sectionComponent}>
         <article>
-          <Banner category={bannerCategory} />
+          <Banner banner={bannerItem} />
           <PriceCards pricingCategories={pricingCategories} />
         </article>
       </section>

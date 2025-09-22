@@ -1,12 +1,16 @@
 @use "../all" as *;
 
 .footer {
-  width: 100%;
+  width: 75%;
+  margin: 0 auto;
   position: relative;
   text-align: center;
   bottom: 0;
   padding: 1% 0;
   border-top: 0.5px solid rgba($color: #000000, $alpha: 0.2);
+  position: relative;
+  background-color: $secondary-color;
+  z-index: 15;
 }
 
 @media (max-width: 768px) {

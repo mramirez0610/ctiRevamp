@@ -6,6 +6,7 @@ import { promises as fs } from "fs";
 import PriceCards from "@components/product/priceCards";
 import { serialize } from "next-mdx-remote/serialize";
 import Banner from "@components/product/banner";
+import BackgroundImage from "@/components/product/backgroundImage";
 
 export default function DayPass({ attributes }) {
   const [stateAttributes, setStateAttributes] = useState(attributes);
@@ -14,28 +15,35 @@ export default function DayPass({ attributes }) {
     setStateAttributes(attributes);
   }, [attributes]);
 
+  const imageArray = stateAttributes.image;
+
+  const imageObj = {
+    src: imageArray.desk,
+    srcMobile: imageArray.mobile,
+    alt: imageArray.alt || "",
+  };
+
   const pricingCategories = [
     { title: "Use Our Gear!", data: stateAttributes.gear },
     { title: "Have Your Own Gear?", data: stateAttributes.noGear },
-    { title: "Forgot Something?", data: stateAttributes.Individual },
+    { title: "Forgot Something?", data: stateAttributes.individual },
   ];
 
-  const bannerCategory = {
-    title: "Climb Time Indy",
-    headline: "Day Passes",
-    desc: "Climb as many times as you want for less than the cost of 3 day passes. The best value in the Indianapolis climbing community.",
-    callToAction:
-      "Sign Up for a Climb Time Indy Day Pass and enjoy the benefits.",
-    src: "/img/testingHorz.png",
-    // src: "/img/testing.png",
-    alt: "Day Pass Banner",
+  const bannerCategory = stateAttributes.banner;
+
+  const bannerItem = {
+    title: bannerCategory.title,
+    headline: bannerCategory.headline,
+    desc: bannerCategory.desc,
+    callToAction: bannerCategory.callToAction,
   };
 
   return (
     <>
       <section className={styles.sectionComponent}>
         <article>
-          <Banner category={bannerCategory} />
+          <BackgroundImage image={imageObj} />
+          <Banner banner={bannerItem} />
           <PriceCards pricingCategories={pricingCategories} />
         </article>
       </section>
