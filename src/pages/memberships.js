@@ -7,6 +7,7 @@ import { promises as fs } from "fs";
 import { serialize } from "next-mdx-remote/serialize";
 import PriceCards from "@components/product/priceCards";
 import Banner from "@components/product/banner";
+import BackgroundImage from "@/components/product/backgroundImage";
 
 export default function Memberships({ attributes }) {
   const [stateAttributes, setStateAttributes] = useState(attributes);
@@ -14,6 +15,14 @@ export default function Memberships({ attributes }) {
   useEffect(() => {
     setStateAttributes(attributes);
   }, [attributes]);
+
+  const imageArray = stateAttributes.image;
+
+  const imageObj = {
+    src: imageArray.desk,
+    srcMobile: imageArray.mobile,
+    alt: imageArray.alt || "",
+  };
 
   const pricingCategories = [
     { title: "Climb By Yourself!", data: stateAttributes.individual },
@@ -27,8 +36,6 @@ export default function Memberships({ attributes }) {
     headline: bannerCategory.headline,
     desc: bannerCategory.desc,
     callToAction: bannerCategory.callToAction,
-    src: bannerCategory.image.desk || bannerCategory.image.mobile || "",
-    alt: bannerCategory.image.alt || "",
   };
 
   return (
@@ -54,6 +61,7 @@ export default function Memberships({ attributes }) {
 
       <section className={styles.sectionComponent}>
         <article>
+          <BackgroundImage image={imageObj} />
           <Banner banner={bannerItem} />
           <PriceCards pricingCategories={pricingCategories} />
         </article>
