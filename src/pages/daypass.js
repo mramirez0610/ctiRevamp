@@ -2,7 +2,7 @@ import matter from "gray-matter";
 import path from "path";
 import { promises as fs } from "fs";
 import { serialize } from "next-mdx-remote/serialize";
-import ProductPage from "@/components/product/ProductPage";
+import ProductPage from "@components/product/ProductPage";
 
 export default function DayPass({ attributes }) {
   return <ProductPage attributes={attributes} />;
