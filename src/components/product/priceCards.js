@@ -14,7 +14,10 @@ export default function PriceCards({ pricingCategories }) {
                   <p className={styles.priceInfo}>
                     Price - <span className={styles.price}>${item.price}</span>
                   </p>
-                  <p className={styles.priceDesc}>{item.description}</p>
+                  {item.length && (
+                    <p className={styles.priceLength}>Length - {item.length}</p>
+                  )}
+                  <p className={styles.priceDesc}>{item.desc}</p>
                 </div>
               ))}
             </ul>
