@@ -34,7 +34,10 @@ export default function ProductPage({ attributes }) {
           name="description"
           content={attributes?.metaDescription || bannerObj.desc}
         />
-        <link rel="canonical" href="https://your-domain.com/memberships" />
+        <link
+          rel="canonical"
+          href={`https://climbtimeindy.com/${attributes.title}`}
+        />
         <meta
           property="og:title"
           content={attributes?.metaTitle || bannerObj.title}

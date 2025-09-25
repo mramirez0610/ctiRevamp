@@ -15,5 +15,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     shape-margin: 1rem;
+
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 1050px) {
+  .backgroundImage {
+    .image {
+      position: fixed;
+    }
   }
 }

@@ -6,8 +6,10 @@
   }
 }
 
-:global(.main) {
-  .content {
-    background-color: red;
+@media (max-width: 1050px) {
+  .main {
+    section {
+      max-width: 100vw;
+    }
   }
 }

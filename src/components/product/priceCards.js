@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import styles from "@scss/pages/priceCards.module.scss";
 
 export default function PriceCards({ pricingCategories }) {
@@ -17,7 +18,9 @@ export default function PriceCards({ pricingCategories }) {
                   {item.length && (
                     <p className={styles.priceLength}>Length - {item.length}</p>
                   )}
-                  <p className={styles.priceDesc}>{item.desc}</p>
+                  <div className={styles.priceDesc}>
+                    <ReactMarkdown>{item.desc}</ReactMarkdown>
+                  </div>
                 </div>
               ))}
             </ul>

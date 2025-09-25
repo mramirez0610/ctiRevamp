@@ -7,9 +7,12 @@
 
   .infoBackdrop {
     @include frostedGlass;
-    width: 60%;
-    border-radius: 20px;
-    padding: 4%;
+
+    & {
+      width: 60%;
+      border-radius: 20px;
+      padding: 4%;
+    }
 
     .backdrop {
       border-radius: 20px;
@@ -54,6 +57,17 @@
 
       .paraS {
         margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .banner {
+    justify-content: center;
+    .infoBackdrop {
+      width: 90vw;
+      .infoCol {
       }
     }
   }
