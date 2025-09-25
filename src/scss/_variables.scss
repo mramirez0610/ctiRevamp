@@ -8,6 +8,7 @@ $secondary-color: #f7f7f7;
 
 @mixin frostedGlass {
   border: 1px solid rgba($color: $secondary_color, $alpha: 0.3);
+  color: #e0e0e0;
   position: relative;
   display: flex;
   flex-direction: column;
