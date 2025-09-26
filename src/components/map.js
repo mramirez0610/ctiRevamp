@@ -3,9 +3,7 @@ import {
   APIProvider,
   Map,
   useMap,
-  useMapsLibrary,
   AdvancedMarker,
-  Pin,
 } from "@vis.gl/react-google-maps";
 // import styles from "@scss/components/map.module.scss";
 

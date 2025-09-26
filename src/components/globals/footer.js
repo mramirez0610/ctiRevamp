@@ -1,5 +1,5 @@
 import styles from "@scss/components/footer.module.scss";
-// import MapDisplay from "@components/map";
+import MapDisplay from "@components/map";
 
 export default function Footer() {
   return (

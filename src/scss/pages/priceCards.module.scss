@@ -73,8 +73,9 @@
 @media (max-width: 1050px) {
   .sectionComponent {
     .priceCards {
+      padding: 2rem 0;
       .priceCard {
-        width: 100%;
+        width: 90%;
       }
     }
   }
