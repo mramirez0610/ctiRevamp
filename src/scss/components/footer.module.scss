@@ -1,19 +1,23 @@
 @use "../all" as *;
 
 .footer {
-  width: 75%;
-  margin: 0 auto;
-  position: relative;
-  text-align: center;
-  bottom: 0;
-  padding: 1% 0;
-  border-top: 0.5px solid rgba($color: #000000, $alpha: 0.2);
-  position: relative;
-  background-color: $secondary-color;
-  z-index: 15;
+  @include frostedGlass;
+
+  & {
+    width: 75%;
+    margin: 2% auto;
+    text-align: center;
+    // bottom: 0;
+    padding: 2% 0;
+    background-color: $primary-color;
+  }
+
+  .footerInfo {
+    z-index: 13;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
   .footer {
     padding: 2% 2%;
   }

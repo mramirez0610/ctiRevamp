@@ -13,14 +13,17 @@
     position: relative;
 
     .priceCard {
-      width: 300px;
-      padding: 1.5rem;
-      border-radius: 12px;
-      text-align: left;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
       @include frostedGlass;
+
+      & {
+        padding: 1.5rem;
+        border-radius: 20px;
+        width: 300px;
+        min-height: 55vh;
+        text-align: left;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
 
       &:hover {
         transform: translateY(-5px);
@@ -36,8 +39,10 @@
 
           .priceTitle {
             font-size: 1.5rem;
-            font-weight: 700;
+            font-weight: 00;
             margin-bottom: 1rem;
+            // text-transform: uppercase;
+            text-align: center;
           }
 
           .itemName {
